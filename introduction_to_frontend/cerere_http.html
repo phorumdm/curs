@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cererea HTTP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+      </style>
+</head><h1>Cererea HTTP</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Pentru a face o anumită cerere serverului respectând regulile protocolului HTTP, definirea adresei URL unde se află resursa solicitată nu este suficientă. Pe lângă URL, este necesară definirea unor informații suplimentare, ambalate într-o formă corespunzătoare. Astfel, cel mai simplu exemplu de cerere HTTP pentru o pagină web poate arăta aşa:</p>
+        <b>GET /index.html HTTP/1.1</b>
+        <p>Cererea HTTP prezentată conține toate caracteristicile necesare de care are nevoie serverul pentru a putea forma un răspuns. Dacă cererea prezentată este defalcată în părți, se poate spune că:</p>
+        <p><b>GET</b> este numele metodei HTTP;</p>
+        <p><b>/index.html</b> este resursa care se solicită;</p>
+        <p><b>HTTP/1.1</b> este versiunea protocolului;</p>
+        <p><b>host: www.mysite.com</b> este numele host-ului.</p>
+        <h2>Structura cererii HTTP </h2>
+        <p>Cererea HTTP pe care clientul o trimite serverului este formată din două părți de bază și câteva părți mai mici:</p>
+        <p><b>capul</b><i>(head)</i></p>
+        <p>linia de pornire sau linia cererii (start line, request line);</p>
+        <p>antet (headers);</p>
+        <p><b>corp </b><i>(body).</i></p>
+    </section>
+    
+</body>
+</html>

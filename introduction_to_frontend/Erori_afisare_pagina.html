@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coduri de stare HTTP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+  aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+      </style>
+</head><h1>Erori afisare pagina html sau Coduri de stare HTTP</h1>
+<body>
+    <aside>
+        <ol id="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="cerere_http.html">Cererea HTTP</a></li>
+          <li><a href="metode_http.html">Metode HTTP</a></li>
+          <li><a href="Erori_afisare_pagina.html">Erori afisare HTTP</a></li>
+          <li><a href="../git/index.html">Utilizare Git</a></li>
+      </ol>
+    </aside>
+    <section>
+      <p>Pentru a marca succesul procesării cererilor clientului, protocolul HTTP cunoaște un număr mare de coduri de stare, împărțite în câteva grupuri. În exemplul prezentat, serverul stabilește în linia de stare un cod 200, ceea ce înseamnă că cererea clientului a fost procesată cu succes. Codul de stare este informația principală pe baza căreia clientul poate ști cum a fost procesată cererea trimisă serverului. Diferite grupuri de răspunsuri de stare, denumite adesea şi clase de stare, sunt:</p> 
+      <ul>
+        <li><b>1xx</b>– informaţii;</li>
+        <li><b>2xx</b>– executarea cu succes a logicii serverului în procesarea cererilor;</li>
+        <li><b>3xx</b> – redirecţionare (redirections);</li>
+        <li><b>4xx</b> – erori ale clientului;</li>
+        <li><b>5xx</b>  – erori de server.</li>
+        <li><b>200 (OK)</b>  – procesarea cererii este de succes și serverul a furnizat un răspuns;</li>
+        <li><b>201 (Created</b> – procesarea cererii este de succes și a fost creată o nouă resursă;</li>
+        <li><b>301 (Moved Permanently)</b> – resursa solicitată a fost mutată la o nouă adresă;</li>
+        <li><b>302 (Found)</b>– resursa solicitată a fost mutată temporar la o altă adresă;</li>
+        <li><b>304 (Not Modified</b> – resursa nu s-a schimbat de la accesul anterior; se utilizează cu ocazia cashing-ului resursei astfel încât clientul să poată verifica dacă există o versiune mai actualizată a resursei;</li>
+        <li><b>400 (Bad Request)</b> – serverul nu a înţeles cererea;</li>
+        <li><b>401 (Unauthorized)</b> – accesul la resursă necesită autorizare;</li>
+        <li><b>403 (Forbidden)</b> –  accesul la resursă este interzis;</li>
+        <li><b>404 (Not Found)</b> – serverul nu poate găsi resursa solicitată;</li>
+        <li><b>500 (Internal Server Error)</b>– eroare pe server în timpul procesării cererii. </li>
+      </ul>
+    </section>
+    
+</body>
+</html>

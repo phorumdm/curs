@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bazele lucrului cu textul</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    img{
+      width: 675px;
+    }
+
+      </style>
+</head><h1>Bazele lucrului cu textul</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <p>Baza fiecărui document HTML este textul. Totuşi, textul în cadrul documentului HTML poate avea diferite roluri, exact ca şi în cadrul oricărui alt document text, în care se pot deosebi diferite secţiuni text. Astfel, prin noţiunea de text se pot presupune titlurile, paragrafele, trecerile într-un rând nou, spaţierile, liniile verticale, precum şi diverse alte forme de text care printr-o formatare specială obţin o semnificaţie specială. În cadrul acestui modul vom aborda toate elementele relevante care asigură adăugarea textului în documentele HTML.</p>
+      <h3>Titlurile (headings)</h3>
+      <p>Fiecare document începe cu un titlu. Diferite părţi din document pot fi identificate prin subtitluri de diferite niveluri. Limbajul HTML cunoaşte 6 niveluri de titluri, care se creează prin folosirea următoarelor elemente HTML:</p>
+      <ul>
+        <li>&lt;h1&gt;</li>
+        <li>&lt;h2&gt;</li>
+        <li>&lt;h3&gt;</li>
+        <li>&lt;h4&gt;</li>
+        <li>&lt;h5&gt;</li>
+        <li>&lt;h6&gt;</li>
+      </ul>
+      <p>Titlurile într-un document HTML se specifică în funcţie de ierarhie. Astfel, h1 se foloseşte pentru titlurile principale, h2 pentru subtitluri etc. Această ierarhie trebuie respectată, aşadar, nu este corect dacă folosiţi, de exemplu, titlul h4 imediat după titlul h1.</p>
+      <p>Ierarhia titlurilor se aplică separat în diferite regiuni ale documentului HTML, desigur, dacă acest document HTML este alcătuit din mai multe regiuni. Astfel este posibil să avem mai multe titluri &lt;h1&gt; în cadrul unui document, care s-ar fi referit la diferite secţiuni ale documentului. Despre diferite secţiuni ale documentului HTML vom oferi mai multe detalii într-una din următoarele lecţii.</p>
+      <h3>Paragrafele (paragraphs)</h3>
+      <p>În documentele HTML, paragrafele se creează prin introducerea textului în cadrul tagului corespunzător de deschidere &lt;p&gt; şi de închidere &lt;/p&gt;</p>
+      <h3>Elementele HTML pentru formatarea textului</h3>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/formatare_text.png" alt="">
+      <h3>Noul rând</h3>
+      <p>Am spus deja că în timpul folosirii elementului paragraph se adaugă în mod automat o linie deasupra şi dedesubt de textul paragrafului. Totuşi, dacă trebuie să influenţăm acest lucru singuri, deci unde se va ajunge la întreruperea textului şi la trecerea într-un rând nou, putem folosi tagul &lt;br&gt;.</p>
+      <h3>Hr</h3>
+      <p>Elementul &lt;hr&gt; asigură despărţirea tematică a textului. Cu toate acestea, acest element a primit numele după noţiunea <i>horizontal rule</i>, care reprezintă o linie orizontală care se poate folosi pentru a despărţi/separa două secţiuni de text. Majoritatea browserelor randează tocmai în acest fel acest element care, pe lângă efectul său vizual, deţine şi o semnificaţie semantică, care asigură despărţirea tematică a textului.</p>
+      <p>Ca şi elementul &lt;br&gt;, nici elementul &lt;hr&gt; nu deţine conţinut şi se creează prin folosirea tagului cu autoînchidere.</p>
+      <h3>Spaţiile şi rândurile în text</h3>
+      <p>Cand apare nevoia de păstrare a spaţiilor multiple, precum şi a trecerilor într-un rând nou fără utilizarea elementului <br>, este posibilă utilizarea elementului &lt;pre&gt;. Întregul conţinut din cadrul elementului &lt;pre&gt; păstrează toate spaţiile şi trecerile într-un rând nou. </p>
+      <h3>Caracterele speciale</h3>
+      <p>În limbajul HTML, anumite caractere au o semnificaţie specială. Reprezentanţii ideali sunt, desigur, semnele mai mare şi mai mic (<>), cu ajutorul cărora se construiesc tagurile HTML. Am prezentat deja de mai multe ori că tagurile HTML în cadrul documentului se folosesc ca instrucţiuni pentru crearea paginii care va fi indicată browserului. Pur şi simplu, în procesul de parsare, browserul omite tagurile şi pe pagină afişează doar conţinutul elementelor HTML. </p>
+      <p>Acum se pune întrebarea: ce se va întâmpla dacă în cadrul documentului HTML vrem să scriem un tag HTML în forma sa sursă, text?</p>
+      <p>Răspunsul la această întrebare se află în utilizarea caracterelor de înlocuire. Caracterele de înlocuire sau entităţile HTML, cum se mai numesc, sunt utile în câteva situaţii. Astfel, entităţile HTML se pot folosi pentru rezolvarea problemelor cu anumite caractere rezervate. De asemenea, entităţile HTML se pot folosi pentru scrierea unor simboluri speciale pentru care nu există tastă pe tastatură.</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/caractere_speciale.png" alt="">
+      <h3>Orientarea textului</h3>
+      <p>Limbajul HTML asigură definirea textului prin diferite sisteme de scriere. Până în momentul de faţă, în cadrul documentelor HTML am definit textul scris în limba engleză, care este una dintre limbile din sistemul scris care deţine orientarea de la stânga la dreapta. Pur şi simplu, textul scris în limba engleză se scrie de la stânga la dreapta, aşadar, putem spune că deţine orientarea left-to-right (prescurtat LTR).</p>
+      <p>Pe lângă sistemele de scriere LTR, există cele la care scrierea se efectuează de la dreapta la stânga, right-to-left sau prescurtat <b>RTL</b> . Limbajul HTML asigură definirea orientării textului, folosind atributul dir. </p>
+      <p>Atributul <i>dir</i> se poate găsi pe orice element HTML, dar utilizarea sa are cel mai mult sens pe elementele cu care se marchează textul care va fi afişat pe pagină.</p>
+      <h3>Limba în care este scris textul</h3>
+      <p>Autorul documentului HTML are posibilitatea să definească limba folosită pentru conţinutul text. Acest lucru se obţine cu atributul lang care, ca şi anteriorul atribut descris, dir, este unul dintre atributele globale.</p>
+      <p>Exemplu de utilizare a atributului lang:</p>
+      <p>1. &lt;p lang="es"&gt;Este es el párrafo.&lt;/p&gt;</p>
+      <p>Atributul lang se poate defini şi global, pe elementul html. În acest caz, limba definită se referă la întregul document:</p>
+      <p>
+        1.  &lt;html lang="en"&gt;<br>
+        2.  ... <br>
+        3.  &lt;/html&gt;
+      </p>
+      <h3>Comentariile HTML</h3>
+      <p>Comentariile reprezintă noţiunea care există în aproape toate limbajele de calculator. Acestea asigură autorului de documente definirea anumitor note în cadrul documentului HTML propriu-zis, care pe lângă aceasta, nu vor fi vizibile pe pagină după parsarea ei.</p>
+      <p>Comentariile HTML se formează prin folosirea marcajelor similare cu tagurile de deschidere şi închidere. Începutul comentariilor HTML se marchează cu semnul &lt;!--, în timp ce sfârşitul comentariului se marchează cu semnul --&gt;.
+      </p>
+      <p>Exemplul de comentarii în cadrul documentului HTML:</p>
+      <p>&lt;!-- This is HTML comment. --&gt;</p>
+      <p>Comentariile HTML sunt folosite intensiv în cadrul exemplelor care se găsesc în ataşamentele lecţiilor în cadrul acestui program. Acestea sunt folosite pentru descrierea diferitor elemente lingvistice utilizate în timpul realizării exemplelor. </p>
+      <br>
+    </section>
+    
+</body>
+</html>

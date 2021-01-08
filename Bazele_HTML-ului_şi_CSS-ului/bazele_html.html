@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bazele HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    }
+      </style>
+</head><h1>Bazele HTML</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <p>Limbajul html se foloseşte pentru definirea structurii unui document HTML. Pentru efectuarea unei astfel de sarcini, limbajul HTML deţine un număr mare de diferite taguri folosite pentru definirea secţiunilor din documentul HTML. Prin combinarea diferitor taguri se construieşte structura unui document HTML, pe baza căruia programul care va parsa un astfel de document (cel mai des browserul web), ştie modul în care trebuie să afişeze pagina.</p> 
+      <p>Tagurile HTML nu sunt singurul element de bază al limbajului HTML. Pe lângă taguri, HTML este alcătuit şi din elemente şi atribute HTML. Prin urmare, principalii factori care construiesc limbajul HTML, şi cărora le vom dedica în continuare această lecţie, sunt:</p>
+      <ul>
+        <li><b>tagurile</b></li>
+        <li><b>elementele</b></li>
+        <li><b>atributele</b></li>
+      </ul>
+      <h4>Tagurile HTML</h4>
+      <p>Limbajul HTML deţine trei tipuri de taguri:</p>
+      <ul>
+        <li>taguri de deschidere; <textarea name="" id="" cols="18" rows="1"> De exemplu <h1></textarea></li>
+        <li>taguri de inchidere; <textarea name="" id="" cols="18" rows="1"> De exemplu </h1></textarea></li>
+        <li>taguri cu autoinchidere; <textarea name="" id="" cols="18" rows="1">De exemplu <br></textarea></li>
+      </ul>
+      <h4>Elementele HTML</h4>
+      <p>Un element HTML începe cu tagul de deschidere şi se termină cu un tag de închidere, în caz că elementul are conţinut. </p>
+      <p>Există şi elemente HTML care nu trebuie închise, tocmai acestea sunt elementele HTML care se construiesc prin utilizarea tagurilor cu autoînchidere. Un astfel de element este şi:</p>
+      <textarea name="" id="" cols="18" rows="1"><br></textarea>
+      <h4>Atributele elementelor</h4>
+      <p>Pe lângă elemente şi taguri, baza limbajului HTML o alcătuiesc şi atributele care pot apărea pe elementele HTML. Fiecare element HTML poate să conţină atribute. Atributele asigură informaţii suplimentare despre elementele HTML şi întotdeauna se definesc pe tagul corespunzător al elementului HTML sau pe tagul cu autoînchidere, dacă elementul nu deţine conţinut. Atributele apar, de obicei, în formă de perechi de chei şi valori, unde denumirea atributului este cheia. Elementul HTML prezentat mai devreme, care reprezintă titlul în documentul HTML, cu un atribut definit poate arăta astfel:</p>
+      <textarea name="" id="" cols="130" rows="1"><h1 id="main-heading">This is a heading</h1></textarea>
+      <p>Denumirile atributelor nu sunt sensibile la majuscule şi minuscule. Astfel, următoarele denumiri ale atributelor sunt complet analoage:</p>
+      <ul>
+        <li>id</li>
+        <li>Id</li>
+        <li>ID</li>
+      </ul>
+      <p>Totuşi, organizaţia W3C recomandă ca atributele să se scrie întotdeauna cu minuscule.</p>
+      <p>Elementele HTML nu sunt limitate la un atribut, Prin urmare, pe un element HTML se poate găsi şi un număr mai mare de atribute diferite:</p>
+      <textarea name="" id="" cols="130" rows="1"><h1 id="main-heading" class="heading" >This is a heading</h1></textarea>
+      <p>De asemenea, există şi atribute obligatorii şi opţionale. Cu alte cuvinte, anumite elemente HTML trebuie să aibă anumite atribute specifice (de exemplu, elementul img trebuie să deţină atributul src şi alt ceea ce vom vedea într-una din viitoarele lecţii). Într-o astfel de situaţie, putem spune că atributele alt şi src sunt atibute obligatorii pentru elementul img.</p>
+      <p>Când vine vorba de valorile atributelor, limbajul HTML nu necesită ca ele să se scrie în ghilimele dacă nu conţin spaţii goale. Totuşi, şi aici întâlnim recomandarea organizaţiei W3C care spune că pentru definirea valorilor atributului trebuie folosite ghilimelele duble. Dacă valoarea atributului conţine ghilimele duble, atunci este obligatorie utilizarea ghilimelelor simple/apostrofuri pentru definirea valorii atributelor, ca în exemplul de mai jos:</p>
+      <textarea name="" id="" cols="130" rows="2"><p title='Mark "Torpedo" Nelson'></p></textarea>
+      <p>Apostrofurile/ghilimelele simple sunt folosite pentru încadrarea valorii atributului, deoarece în cadrul valorii atributului apar ghilimelele duble.Aceeaşi regulă este valabilă şi într-o situaţie inversă - când în cadrul valorii atributului se află ghilimelele simple/apostrofurile.</p>
+      <textarea name="" id="" cols="130" rows="2"><p title="Mark 'Torpedo' Nelson"></p></textarea>
+      <p>De această dată, pentru definirea valorii atributului sunt folosite ghilimele duble, pentru că în cadrul valorii atributului apar ghilimele simple/apostrofuri.</p>
+      <h4>Versiuni ale limbajului HTML</h4>
+      <ul>
+        <li>HTML</li>
+        <li>HTML2</li>
+        <li>HTML3</li>
+        <li>HTML4</li>
+        <li>HTML5</li>
+        <li>XHTML</li>
+      </ul>
+      <p>Diferenţele dintre diferite versiuni ale limbajului HTML se reflectă, în general, asupra disponibilităţii şi suportului diferitor taguri, respectiv elemente, dar şi în mici diferenţe de sintaxă. Cu alte cuvinte, cu fiecare versiune nouă de HTML, este introdus un set suplimentar de noi taguri de un scop diferit. Pe lângă aceasta, regulile sintactice pentru scrierea anumitor taguri s-au schimbat. De exemplu, versiunile XHTML şi HTML5 au definit diferite reguli de scriere a tagurilor cu autoînchidere.</p>
+      <h5>HTML5</h5>
+      <p>HTML5 este standardul recomandat în momentul de faţă pentru crearea documentelor HTML. HTML5 este implementat în ziua de astăzi în toate browserele moderne pe calculatoare, dispozitive mobile şi alte dispozitive similare.</p>
+      <p>Prima versiune de lucru a acestui limbaj este prezentată în anul 2008, în timp ce statusul W3C Recommendation a fost obţinut pe data de 28 octombrie 2014.</p>
+      <p>HTML5 aduce şi o sintaxă semnificativ mai îmbunătăţită a limbajului, prin prezentarea unei mulţimi de elemente noi, dar şi un API pentru dezvoltarea aplicaţiilor web complexe. Tocmai de aceea, în ziua de azi HTML5 se foloseşte nu doar pentru dezvoltarea paginilor web, ci şi pentru aplicaţiile mobile pe platforme independente, pentru aplicaţiile desktop etc.</p>
+      <br>
+    </section>
+    
+</body>
+</html>

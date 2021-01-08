@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strutura documentelor HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    #first{
+      background-color: hotpink;
+    }
+    #one{
+      width: 30%;
+    }
+    #two{
+      width: 69%;
+    }
+    table {
+      width: 665px;
+      border-collapse: collapse;
+      border-spacing: 2px;
+      text-align: center;
+
+    }
+    td {
+  border: solid 1px #000000;
+}
+      </style>
+</head><h1>Strutura documentelor HTML</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <p>Realitatea este totuşi că limbajul HTML, pe lângă elementele care deţin reprezentarea vizuală, recunoaşte şi câteva elemente invizibile, prin care se defineşte structura de bază a paginii HTML.</p>
+      <p>Familiarizarea cu astfel de elemente s-a amânat, cu un motiv bun, până la această lecţie pentru a înţelege cât mai bine bazele abordate până acum. Totuşi, ca şi un alt oarecare limbaj, şi HTML deţine regulile sale semantice şi sintactice, care trebuie respectate. Una dintre aceste reguli impune că fiecare document HTML trebuie să deţină structura de bază alcătuită din câteva elemente.</p>
+      <h4>Structura documentelor HTML</h4>
+      <p>Structura de bază a documentului HTML este următoarea:</p>
+      <textarea name="" id="" cols="130" rows="10"><!DOCTYPE html>
+        <html>
+        <head>
+             
+        </head>
+        <body>
+             
+        </body>
+        </html>
+      </textarea>
+      <p>În structura prezentată putem recunoaşte câteva taguri de deschidere şi de închidere, adică, cu alte cuvinte, câteva elemente HTML. Se poate spune că principala structură a documentului HTML este alcătuită din următoarele părţi:</p>
+      <ul>
+        <li>declaraţia DOCTYPE,</li>
+        <li>elementul html,</li>
+        <li>elementul head,</li>
+        <li>elementul body.</li>
+      </ul>
+      <h3>DOCTYPE</h3>
+      <p>Primul element al structurii de bază HTML este declaraţia DOCTYPE. Declaraţia DOCTYPE (Document Type Declaration, prescurtat DTD) se află la începutul fiecărei pagini HTML cu „tagul" DOCTYPE. Cuvântul tag este intenţionat pus în ghilimele. De fapt, DOCTYPE nu este un tag HTML real, ci o instrucţiune dată browserului (datorită semnului ! după deschiderea tagului). </p>
+      <p>Declaraţia DOCTYPE îi comunică browserului versiunea HTML-ului folosită în document. Din lecţia anterioară ne este cunoscut faptul că versiunea curentă a limbajului HTML este 5, ea definind declaraţia în forma următoare:</p>
+      <textarea name="" id="" cols="130" rows="1"><!DOCTYPE html></textarea>
+      <p>Există şi declaraţii în diferite alte forme, în funcţie de versiunea limbajului HTML care se utilizează cum ar fi</p>
+      <table>
+        <tr id="first">
+          <td id="one">Versiune</td>
+          <td id="two">DOCTYPE</td>
+        </tr>
+        <tr>
+          <td>HTML5</td>
+          <td><xmp><!DOCTYPE html></xmp></td>
+        </tr>
+        <tr>
+          <td>HTML4</td>
+          <td><xmp><!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 </xmp><xmp>Transitional//EN""http://www.w3.org/TR/html4/loose.dtd"></xmp></td>
+        </tr>
+        <tr>
+          <td>XHTML</td>
+          <td><xmp><!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 </xmp><xmp> <br><xmp> Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></xmp></td>
+        </tr>
+      </table>
+      <h3>Elementul HTML</h3>
+      <p>După declaraţia DOCTYPE, structura de bază a documentului HTML defineşte elementul HTML. Având în vedere că DOCTYPE nu se poate denumi drept un element adevărat, putem spune că elementul rădăcină al fiecărui document HTML este un element html. El începe cu tagul "html" de deschidere şi întotdeauna se termină cu tagul de închidere "html":</p>
+      <textarea name="" id="" cols="30" rows="4">
+        <html>
+        ...
+        </html>
+      </textarea>
+      <p>Câteva dintre cele mai importante caracteristici ale elementului html sunt următoarele:</p>
+      <ul>
+        <li>reprezintă elementul rădăcină al documentului HTML;</li>
+        <li>este un element obligatoriu, fără el documentul HTML nu este valid;</li>
+        <li>cuprinde toate celelalte elemente de pe pagină.</li>
+      </ul>
+      <p>Elementul html este părinte pentru doi descendenţi direcţi. Acestea sunt elementele:</p>
+      <ul>
+        <li><i>head – antetul documentului;</i></li>
+        <li><i>body – corpul documentului.</i></li>
+      </ul>
+      <p>Structura de bază a documentelor HTML este un exemplu ideal al formei arborelui. În cadrul elementului html se găsesc elementele head şi body. Este vorba de structura de bază HTML, în timp ce în practică numărul de elemente în acest arbore este mult mai mare.</p>
+      <h3>Corpul documentului HTML – elementul body </h3>
+      <p>Elementul body reprezintă corpul documentului HTML. În cadrul părţii body sunt localizate toate elementele care vrem să fie vizibile pe pagină după parsarea ei în cadrul browserului. Acest lucru înseamnă practic că toate aceste elemente HTML pe care le-am folosit până acum pentru realizarea exemplelor introductive, aparţin corpului documentului şi, de regulă, ele trebuie introduse în cadrul elementului body.</p>
+      <h3>Antetul documentului HTML - elementul head</h3>
+      <p>În cadrul elementului head, care se mai numeşte şi antetul documentului HTML, se introduc elemente care nu sunt direct vizibile pe pagină. De exemplu, în partea head se introduc meta taguri, legături (linkuri) către fişierele CSS şi către alte fişiere etc.</p>
+      <p>Elementul head începe cu tagul head şi se termină cu tagul /head. Acesta este elementul rădăcină pentru toate datele antetului unuia dintre documentele HTML. Elementul head este elementul părinte cu următoarele elemente HTML:</p>
+      <ul>
+        <li><textarea name="" id="" cols="30" rows="1"><title></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><base></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><link></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><meta></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><scrip t></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><nonscript></textarea></li>
+        <li><textarea name="" id="" cols="30" rows="1"><styl e></textarea></li>
+      </ul>
+      <h3>Elementul <i>title</i> </h3>
+      <p>Elementul title este elementul obligatoriu al fiecărui document HTML. El defineşte denumirea documentului HTML care se foloseşte în câteva situaţii diferite în timpul afişării numelui paginii în:</p>
+      <ul>
+        <li>fereastra browserului;</li>
+        <li>paginile favorite;</li>
+        <li>rezultatele căutării din motoarele de căutare.</li>
+      </ul>
+      <p>Un document poate avea un singur element title.</p>
+      <p>Elementul title se defineşte în cadrul secţiunii head, iar dacă secţiunea head nu este specificată, elementul title se defineşte ca descendent direct al elementului html.</p>
+      <h3>Elementul <i>style</i></h3>
+      <p>Elementul style se foloseşte pentru definirea stilizării CSS pentru documentul HTML curent. Stilizarea determină cum va arăta elementul HTML. CSS este noţiunea căreia îi vom dedica a doua parte a acestui curs. Într-un document HTML este posibil să avem un număr mai mare de elemente style.</p>
+      <h3>Elementul <i>base</i></h3>
+      <p>Elementul base defineşte adresa de bază pentru toate adresele relative în cadrul documentului HTML. Rolul acestui element depăşeşte cunoştinţele pe care le deţinem în acest moment, aşadar, la acesta revenim într-una din lecţiile anterioare în care vom vorbi despre linkuri.</p>
+      <h3>Elementul <i>link</i></h3>
+      <p>Elementul link se foloseşte pentru definirea legăturii cu documentul extern sau cu resursa. Cel mai des se foloseşte pentru legarea fişierului extern cu stilizarea. Elementul link se poate găsi doar în cadrul secţiunii head, de un număr arbitrar de ori. Pentru acest element sunt valabile aceleaşi reguli ca şi pentru elementul anterior. Cu el ne vom ocupa separat în lecţiile despre stilizare. </p>
+      <h3>Elementul <i>meta</i></h3>
+      <p>Elementul meta se foloseşte pentru definirea metadatelor despre documentul HTML. Metadatele nu se afişează pe pagină, însă de aceea sunt folosite din partea browserului, motorului de căutare (search engine) şi a altor servicii web.</p>
+      <p>Elementul meta se foloseşte cel mai des pentru definirea:</p>
+      <ul>
+        <li>regulilor paginii;</li>
+        <li>cuvintelor-cheie;</li>
+        <li>autorilor documentului;</li>
+        <li>timpului când a fost modificată pagina pentru ultima dată;</li>
+        <li>datelor privind compatibilitatea.</li>
+      </ul>
+      <p>Elementul Meta se scrie întotdeauna în cadrul secţiunii head, de un număr arbitrar de ori. În varianta limbajului HTML5, elementul meta se formează prin utilizarea tagului cu autoînchidere.</p>
+      <p>Meta elementul poate conţine câteva atribute prin care se editează, suplimentar, scopul său. Cu atributul charset se setează tipul de codare (encoding), ceea ce determină modul în care browserul va citi pagina şi va afişa caracterele specifice. Se recomandă întotdeauna folosirea codării utf-8, în special pentru documentele HTML care conţin părţi din text cu diacritice româneşti, dar şi pentru toate limbile care conţin anumite caractere specifice (germană, spaniolă, norvegiană, daneză etc.). Folosind codarea utf-8, se asigură o afişare adecvată a caracterelor specifice cum ar fi ă,î, ş, ţ â şi altele.</p>
+      <h3>Elementul <i>script</i></h3>
+      <p>Elementul script se foloseşte pentru integrarea codului JavaScript în documentul HTML. Elementul script poate conţine un cod în mod direct sau poate indica la fişierul extern cu scriptul client.</p>
+      <h3>Elementul <i>nonscript</i></h3>
+      <p>Elementul noscript se foloseşte pentru definirea unui conţinut alternativ care va fi afişat utilizatorilor în ale căror browsere este dezactivată sau nu este susţinută execuţia scripturilor. Acest element se poate defini în cadrul secţiunii head sau body. </p>
+      <br>
+
+    </section>
+    
+</body>
+</html>

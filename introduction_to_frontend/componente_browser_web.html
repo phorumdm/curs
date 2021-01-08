@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Componentele browserului wweb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+      </style>
+</head><h1>Componentele browserului wweb</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <p>Componentele de bază pe care le are fiecare browser web sunt:</p>
+      <ul>
+        <li><b>User Interface</b> –  mediu de utilizator care are toate elementele vizuale cu care utilizatorul controlează browserul; în acest segment sunt incluse câmpul pentru introducerea adresei, butoanele Back şi Forward și elemente vizuale similare; aranjarea și disponibilitatea diferitelor elemente ale mediului de utilizator variază de la browser la browser;</li>
+        <li><b>Browser Engine</b>– segmentul care reprezintă legătura dintre mediul de utilizator și componentele pentru randarea conținutului; comenzile utilizatorilor direcționate utilizând elementele din mediul de utilizator prin intermediul acestui segment sunt transmise componentelor pentru randare;</li>
+        <li><b>Rendering Engine</b> – componenta pentru randare, responsabilă pentru afișarea paginii web; este vorba de o componentă a cărei funcţie este de a crea aspectul unei pagini web pe baza codului HTML și CSS; face acest lucru prin parsarea codului HTML și CSS;</li>
+        <li><b>Networking</b> –  partea browserului responsabilă pentru transmiterea cererilor HTTP și primirea răspunsurilor HTTP;</li>
+        <li><b>JavaScript Engine</b> – componenta responsabilă cu executarea codului JavaScript; mai devreme, această operaţie a fost realizată prin procesul de interpretare, în timp ce astăzi majoritatea browserelor moderne folosesc o variantă specială de compilare - compilarea JIT (despre ea vom discuta mai multe în cursurile de bază ale JavaScript-ului);</li>
+        <li><b>UI Backend</b> – componentă responsabilă cu desenarea a tot ce există într-un browser, atât interfața cu utilizatorul, cât și paginile web; aceasta este, de asemenea, o componentă care desenează anumite elemente HTML, cum ar fi checkbox sau elementele radio button sau a listei drop-down;</li>
+        <li><b>Data Persistence</b> – o componentă responsabilă cu stocarea diferitelor tipuri de date pe un calculator client; browserele moderne, în timpul utilizării, pot produce diferite tipuri de date; acestea pot fi stocate folosind o varietate de mecanisme, cum ar fi: cookie-uri, cache, Web Storage, IndexedDB; astfel de mecanisme de stocare a datelor sunt puse la dispoziția aplicațiilor web care se rulează în interiorul browserului, prin urmare, acestea sunt subiect de interes pentru dezvoltarea front-end; în continuarea acestui program, astfel de mecanisme diferite de stocare a datelor locale vor fi obiectul unui curs separat.</li>
+      </ul>
+    </section>
+    
+</body>
+</html>

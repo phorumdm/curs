@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stilizarea documentelor HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    #text{
+      width: 680px;
+    }
+      </style>
+</head><h1>Stilizarea documentelor HTML</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <p>Pentru a face mai interesant acest prim exemplu de creare a documentului HTML, în rândurile următoare vom face stilizarea lui de bază. În lecțiile anterioare s-a spus că pentru stilizarea unui document HTML este folosit limbajul CSS (Cascading Style Sheets). Cu sintaxa și caracteristicile acestui limbaj ne vom familiariza în cursul următor, iar acum, fără a intra în detalii în regulile CSS, vom face o stilizare de bază a primului nostru document HTML..</p> 
+      <p>Textul celor trei elemente care există în cadrul listei le vom colora cu trei culori diferite - roșu, verde și albastru. Vom realiza acest lucru în felul următor:</p>
+      <xmp id="text">
+        <h1>Introduction to Front-end Development</h1>
+        <p>A front-end developer architects and develops client part of websites and applications using web technologies (languages):</p>
+      <ul>
+         <li style="color: red;">HTML</li>
+         <li style="color: green;">CSS</li>
+         <li style="color: blue;">JavaScript</li>
+      </ul>
+    </xmp>
+    </section>
+    
+</body>
+</html>

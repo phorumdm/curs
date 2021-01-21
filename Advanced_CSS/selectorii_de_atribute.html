@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectorii de atribute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    img{
+      width: 675px;
+    }
+
+      </style>
+</head><h1>Selectorii de atribute</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <h3>Selectorii de atribute</h3>
+      <p>Activitatea de stilizare face parte din grupul celor mai importante activităţi efectuate în timpul creării site-urilor. Limbajul de stilizare a site-urilor se numeşte CSS. Baza acestui limbaj o constituie regulile CSS, formate din selectori şi declaraţii. Exemplul structurii de bază a unei simple reguli CSS este prezentat în imaginea de mai jos</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/css_selector.png" alt="">
+      <p>Prin regula CSS prezentată în imaginea de mai sus, se obţine setarea culorii albastre a textului pe toate titlurile de tip h1. Pe baza căror lucruri ştim că o astfel de stilizare va fi aplicată pe toate titlurile h1? Răspunsul la această întrebare se află în noţiunea de selectori.</p>
+      <p>Selectorii CSS reprezintă mecanismul de bază cu ajutorul căruia se stabilesc elementele pe care va fi aplicată stilizarea definită prin regula CSS.</p>
+      <p>Limbajul CSS cunoaşte diferite tipuri de selectori. În selectorii CSS de bază intră:</p>
+      <ul>
+          <li>selectorul universal;</li>
+          <li>selectorul de tip;</li>
+          <li>selectorul class;</li>
+          <li>selectorul id;</li>
+          <li>selectorii bazaţi pe relaţii.</li>
+      </ul>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/selctorii.png" alt="">
+      <p>Pe lângă selectorii menţionaţi, CSS cunoaşte şi diferiţi selectori avansaţi, pe care îi vom aborda în acest modul, cum ar fi:</p>
+      <ul>
+          <li>selectorii de atribute;</li>
+          <li>pseudoclasele;</li>
+          <li>pseudoelementele.</li>
+      </ul>
+      <h3>Ce sunt atributele HTML?</h3>
+      <p>Toate elementele HTML pot deţine atribute. Atributele se folosesc pentru o descriere suplimentară sau pentru configurarea elementelor HTML. De exemplu, în timpul definirii elementului img, de obicei se folosesc două atribute HTML:</p>
+      <pre>
+        &lt;img src="test-img.jpg" alt="this is test image"&gt;
+      </pre>
+      <p>Crearea elementului img este urmată de definirea următoarelor două atribute HTML: src şi alt. Folosind atributul src, definim calea până la imaginea care va fi afişată pe pagina web, în timp ce prin folosirea atributului alt definim descrierea imaginii care va apărea pe pagină în situaţiile în care nu va fi posibilă încărcarea imaginii.</p>
+      <p>Principalele proprietăţi ale atributelor HTML pe care trebuie să le ştiţi sunt următoarele:</p>
+      <ul>
+          <li>Atributele HTML se găsesc întotdeauna pe tagul de deschidere sau pe cel cu autodeschiere, dar nu se găsesc niciodată pe tagul de închidere.</li>
+          <li>Atributele HTML se definesc în forma unor perechi de chei şi valori.</li>
+          <li>Toate elementele HTML pot deţine atribute.</li>
+          <li>Există atribute care se pot găsi pe toate elementele HTML, ele numindu-se atribute globale (class, id, lang, title, style...).</li>
+      </ul>
+      <h3>Selectarea elementelor pe baza atributelor</h3>
+      <p>Atributele HTML, pe lângă proprietăţile descrise, se pot folosi şi ca un criteriu pentru selectarea elementelor. Desigur, cele mai cunoscute atribute HTML folosite pentru selectare sunt atributele id şi class:</p>
+      <pre>
+        #some-id {
+            color: red;
+        }
+         
+        .some-class {
+            color: red;
+        }
+      </pre>
+      <p>În regulile CSS tocmai prezentate, sunt folosiţi selectorii id şi class pentru selectare. Cu primul selector (#some-id) va fi selectat elementul care ca valoare a atributului id deţine some-id. Cu al doilea selector se vor selecta toate elementele care ca valoare a atributului class deţine some-class.</p>
+      <p>În tabelul de mai jos sunt prezentate modalităţile în care se poate selecta elementul (sau elementele) pe baza atributelor.</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/selectarea_atributelor.png" alt="">
+      <h3>Selectarea pe baza existenţei atributului</h3>
+      <p>CSS permite selectarea unui element pe baza existenţei unui anumit atribut sau pe baza unei valori specifice pe care o are un atribut. Când selectăm un element pe baza existenţei unui atribut, sintaxa selectorului este identică celei din imaginea de mi jos</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/existenta_atributului.png" alt="">
+      <p>Pur şi simplu, pe partea obişnuită a selectorului se adaugă partea cu paranteze drepte.</p>
+      <p>Următorul exemplu ilustrează situaţia în care se selectează toate linkurile care deţin un atribut specific:</p>
+      <pre>
+        a[target] {
+            color: yellow;
+         }
+      </pre>
+      <p>În modul prezentat vor fi selectate toate elementele a care deţin atributul target.</p>
+      <h3>Selectarea pe baza valorii exacte a atributului</h3>
+      <p>Când trebuie selectate elementele pe baza valorii unui atribut, sintaxa selectorului este identică celei din imaginea de mai jos</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/vaaloare_atributului.png" alt="">
+      <p>Între parantezele drepte, pe lângă denumirea atributului, se specifică şi valoarea sa.</p>
+      <pre>
+        a[target="_blank"] {
+            color: yellow;
+         }
+      </pre>
+      <p>În acest fel, vor fi selectate toate elementele a a căror valoare a atributului target este _blank.</p>
+      <h3>Selectarea pe baza unei părţi din valoarea atributului care se poate găsi oriunde</h3>
+      <p>CSS permite selectarea elementelor pe baza unei părţi din valoarea atributului. Pe lângă asta, această parte a valorii se poate găsi oriunde în cadrul valorii propriu-zise. Sintaxa unui astfel de selector este prezentată în imaginea de mai jos</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/somewere.png" alt="">
+      <p>Exemplul acestui selector este următorul:</p>
+      <pre>
+        div[class*="wrap"] {
+            background-color: yellow;
+        }        
+      </pre>
+        <p>În acest fel, vor fi selectate toate elementele div care în denumirea clasei au secvenţa caracterului wrap, oriunde. Elementul care ar fi fost selectat în acest fel, poate arăta așa:</p>
+        <pre>
+            &lt;div class="wrapper"&gt;
+                …
+            &lt;/div&gt;
+        </pre>
+        <h3>Selectarea pe baza textului cu care începe valoarea atributului</h3>
+        <p>CSS asigură selectarea elementelor pe baza textului cu care începe valoarea unui anumit atribut. Sintaxa acestui selector este prezentată în imaginea de mai jos</p>
+        <img src="../Bazele_HTML-ului_şi_CSS-ului/images/bigin_with.png" alt="">
+        <p>Exemplul de utilizare a unui astfel de selector este selectarea tuturor linkurilor care indică acelaşi site, adică acelaşi domeniu, indiferent de pagina concretă a acestui site. Aceste linkuri pot arăta astfel:</p>
+        <pre>
+            &lt;a href="http://www.link-group.eu"&gt;Link Group&lt;/a&gt;
+            &lt;a href="http://www.link-group.eu/careers"&gt;Link Careers&lt;/a&gt;
+            &lt;a href="http://www.link-group.eu/about-us-0"&gt;About Link&lt;/a&gt;
+        </pre>
+        <p>Toate cele trei linkuri prezentate au un domeniu identic: http://www.link-group.eu. Totuşi, paginile concrete se deosebesc. Dacă trebuie selectate toate linkurile ale căror atribut href începe cu http://www.link-group.eu, se poate scrie un selector care arată astfel:</p>
+        <pre>
+            a[href^="http://www.link-group.eu"] { 
+                color: red; 
+            }
+        </pre>
+        <h3>Selectarea pe baza textului cu care se termină valoarea atributului</h3>
+        <p>Similar cu exemplul anterior, CSS asigură selectarea elementului pe baza textului cu care se termină valoarea atributului. Sintaxa acestui selector este prezentată în imaginea de mai jos</p>
+        <img src="../Bazele_HTML-ului_şi_CSS-ului/images/valoare_finala.png" alt="">
+        <p>Un exemplu excelent de utilizare a unui astfel de selector este selectarea linkurilor de descărcare (download) pe baza extensiei fişierului. Exemplul de selector care va selecta doar linkurile care indică fişiere pdf este următorul:</p>
+        <pre>
+            a[href$=".pdf"] { 
+                font-style: italic;
+            }
+        </pre>
+        <p>Linkul care va fi selectat în acest mod poate arăta astfel:</p>
+        <pre>
+            &lt;a href="demo.pdf"&gt;Download PDF document&lt;/a&gt;
+        </pre>
+        <h3>Selectarea pe baza valorii identice sau a unei părţi din valoarea atributului care este separată prin spaţii goale</h3>
+        <p>O practică deseori întâlnită este setarea mai multor clase pe un element HTML. Exemplul unui astfel de element este următorul:</p>
+        <pre>
+            &lt;h1 class="heading animate fade"&gt;This is document heading&lt;/h1&gt;
+        </pre>
+        <p>Dacă trebuie selectat un element pe baza denumirii unei clase, atunci selectorul class este suficient, deoarece asigură selectarea pe baza denumirilor individuale ale claselor:</p>
+        <pre>
+            .heading {
+                color: blue;
+            }
+        </pre>
+        <p>sau</p>
+        <pre>
+            .fade {
+                color: blue;
+            }
+        </pre>
+        <p>Totuşi, acest lucru nu se poate obţine cu alte atribute.Să analizăm următorul exemplu:</p>
+        <pre>
+            &lt;a href="http://www.link-group.eu" target="_blank" title="link"&gt;Link Group&lt;/a&gt;
+            &lt;a href="http://www.link-group.eu/careers" title="link careers"&gt;Link Careers&lt;/a&gt;
+            &lt;a href="http://www.link-group.eu/about-us-0" title="about-link"&gt;About Link&lt;/a&gt;
+        </pre>
+        <p>Tocmai am prezentat trei linkuri. Fiecare link are atributul title cu diferite valori. Ce s-ar fi întâmplat dacă am fi selectat toate elementele a care în cadrul valorii atributului title au cuvântul link? Acest lucru se poate obţine prin folosirea selectorului ilustrat în imaginea de mai jos</p>
+        <img src="../Bazele_HTML-ului_şi_CSS-ului/images/space_separeted.png" alt="">
+        <p>Acest selector se poate formata în felul următor:</p>
+        <pre>
+            a[title~="link"] {
+                color: red;
+            }
+        </pre>
+        <p>În acest fel, primul şi al doilea link vor fi colorate cu roşu, având în vedere că aceste două linkuri, în cadrul valorii atributului title, au cuvântul link. Şi ultimul element a din cadrul atributului title are textul link, dar el nu este separat prin spaţii goale de restul valorilor, aşadar, nu satisface condiţia acestui selector.</p>
+        <h3>Selectarea pe baza valorii complete sau a începutului ei după care urmează caracterul liniuţă (-)</h3>
+        <p>O practică deseori întâlnită este în situaţiile în care valorile atributelor conţin mai multe cuvinte care se separă prin caracterul liniuţă (-):</p>
+        <pre>
+            &lt;h1 class="top-header"&gt;Welcome&lt;/h1&gt;
+            &lt;p class="top-text"&gt;Hello world!&lt;/p&gt;
+            &lt;p class="top"&gt;Hello world again!&lt;/p&gt;
+            &lt;p class="top text"&gt;Hello world once more!&lt;/p&gt;
+        </pre>
+        <p>Liniile prezentate ilustrează elementele în care toate valorile atributului class încep cu valoarea top. CSS are selectorul care efectuează selectarea elementelor pe baza începutului valorii unui atribut. Totuşi, spre deosebire de selectorul menţionat mai devreme, cu un scop similar, se ia în considerare începutul valorii şi până la caracterul liniuţă (-). Selectorul cu acest comportament are o sintaxă identică celei prezentate în imaginea de mai jos</p>
+        <img src="../Bazele_HTML-ului_şi_CSS-ului/images/separare_liniuta.png" alt="">
+        <p>Exemplul acestui selector este următorul:</p>
+        <pre>
+            [class|="top"] {
+                background: yellow;
+             }
+        </pre>
+        <p>Acest selector va alege elementele care satisfac următoarele criterii:</p>
+        <ul>
+            <li>atributul class are valoarea top;</li>
+            <li>atributul class începe cu valoarea top, care este separată de restul textului prin caracterul liniuţă (-).</li>
+        </ul>
+        <p>Practic, toate acestea înseamnă că în exemplul prezentat, în acest mod, se va selecta titlul h1 şi primele două elemente de tip paragraph. Nu va fi selectat doar ultimul paragraf, deoarece în cadrul valorii sale class, top nu este separat prin liniuţă de restul valorilor.</p>
+        <br>
+    </section>
+    
+</body>
+</html>

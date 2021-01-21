@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listele</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    img{
+      width: 675px;
+    }
+
+      </style>
+</head><h1>Listele</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <h3>Ce sunt listele?</h3>
+      <p>Noţiunea de listă vă este oricum cunoscută din viaţa de zi cu zi. Listele reprezintă un mod special de formatare a textului şi sunt alcătuite, în general, din câteva elementele familiale. Lista de produse care trebuie cumpărate într-un magazin poate fi exemplul unei liste.</p>
+      <p>Cu listele v-aţi întâlnit, probabil, şi în timpul lucrului cu programele pentru procesarea textului (de exemplu, Word). Exemplul unei liste poate arăta astfel:</p>
+      <ul>
+        <li>sugar</li>
+        <li>bread</li>
+        <li>milk</li>
+        <li>chocolate</li>
+        <li>biscuit</li>
+      </ul>
+      <h3>Listele în HTML</h3>
+      <p>Limbajul HTML asigură crearea a trei tipuri diferite de liste:</p>
+      <ul>
+        <li><b>Listele ordonate (ordered)</b>– elementele se marchează cu unul dintre elementele de ordine, cel mai des cu cifre romane sau arabe, cu literele din abecedar etc.</li>
+        <li><b>Listele neordonate (unordered)</b>– spre deosebire de listele ordonate, la listele neordonate nu se pune accent pe importanţa ordinii elementelor, aşadar, elementele se marchează cu diferite simboluri, cum ar fi pătratul, cercul, liniuţa etc.</li>
+        <li><b>Listele de definiţie (definition) </b> – asigură crearea definiţiei fiecărui element în listă.</li>
+      </ul>
+      <h3>Listele ordonate (ordered)</h3>
+      <p>Lista ordonată începe cu tagul de deschidere &lt;ol&gt; şi se termină cu tagul de închidere &lt;/ol&gt;. Fiecare element al listei începe cu tagul &lt;li&gt; şi se termină cu tagul &lt;/li&gt;.</p>
+      <h3>Listele neordonate (unordered)</h3>
+      <p>Listele neordonate se creează similar ca şi cele tocmai menţionate, cele ordonate. Singura diferenţă constă în utilizarea tagurilor folosite ca un container pentru elementele listei. La listele neordonate, acestea sunt tagurile &lt;ul&gt; şi &lt;/ul&gt;. </p>
+      <h3>Listele imbricate</h3>
+      <p>O întreagă listă poate apărea ca un singur element al unei alte liste. Într-o astfel de situaţie putem spune că o listă se găseşte în cadrul unei alte liste, ceea ce presupune procesul numit imbricare a listelor.</p>
+      <p>
+        <pre>
+          &lt;ul&gt;<br>
+          &lt;li&gt;nigredo <br>
+          &lt;ul&gt; <br>
+                &lt;li&gt;primo&lt;/li&gt; <br>
+                &lt;li&gt;secundo&lt;/li&gt; <br>
+          &lt;/ul&gt; <br>
+          &lt;/li&gt; <br>
+          &lt;li&gt;albedo&lt;/li&gt; <br>
+          &lt;li&gt;citrinitas&lt;/li&gt; <br>
+          &lt;li&gt;rubedo&lt;/li&gt;<br>
+      &lt;/ul&gt;
+        </pre>
+      </p>
+      <p>codul prezentat va avea un efect identic celui de mai jos:</p>
+      <ul>
+        <li>nigredo
+          <ul>
+            <li>primo</li>
+            <li>secundo</li>
+          </ul>
+        </li>
+        <li>albedo</li>
+        <li>citrinitas</li>
+        <li>rubedo</li>
+      </ul>
+      <h3>Listele de definiţie (definition)</h3>
+      <p>Listele de definiţie se utilizează mai rar decât listele ordonate şi neordonate tocmai descrise. Pot fi utile în situaţiile în care trebuie asigurată descrierea elementelor. Astfel, listele de definiţie se creează în formă de perechi de chei şi definiţii. Exemplul unei liste de definiţie este următorul:</p>
+      <p>
+        <pre>
+          &lt;dl&gt;
+                  &lt;dt&gt;nigredo&lt;/dt&gt;
+                  &lt;dd&gt;a blackening or melanosis&lt;/dd&gt;
+                  &lt;dt&gt;albedo&lt;/dt&gt;
+                  &lt;dd&gt;a whitening or leucosis&lt;/dd&gt;
+                  &lt;dt&gt;citrinitas&lt;/dt&gt;
+                  &lt;dd&gt;a yellowing or xanthosis&lt;/dd&gt;
+                  &lt;dt&gt;rubedo&lt;/dt&gt;
+                  &lt;dd&gt;a reddening, purpling, or iosis&lt;/dd&gt;
+          &lt;/dl&gt;
+        </pre>
+      </p>
+        <p>Denumirile elementelor se identifică cu tagurile &lt;dt&gt;, iar definiţiile lor se identifică cu tagurile &lt;dd&gt;. Codul prezentat produce un efect identic celui de mai jos</p>
+        <dl>
+          <dt>nigredo</dt>
+          <dd>a blackening or melanosis</dd>
+          <dt>albedo</dt>
+          <dd>a whitening or leucosis</dd>
+          <dt>citrinitas</dt>
+          <dd>a yellowing or xanthosis</dd>
+          <dt>rubedo</dt>
+          <dd>a reddening, purpling, or iosis</dd>
+      </dl>
+      <p>Listele de definiţie se pot folosi pentru crearea paginilor FAQ, având în vedere că acestea se încadrează excelent în forma de întrebări şi răspunsuri.</p>
+    </section>
+    
+</body>
+</html>

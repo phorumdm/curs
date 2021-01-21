@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linkurile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    img{
+      width: 675px;
+    }
+
+      </style>
+</head><h1>Linkurile</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+      <h3>Ce sunt linkurile?</h3>
+      <p>Una dintre funcţionalităţile de bază ale limbajului HTML este posibilitatea de legare reciprocă a documentelor care se creează. Acest lucru se poate concluziona pe baza denumirii acestui limbaj: HyperText Markup Language. În lecţia introductivă a acestui curs am spus că noţiunea de Hypertext se referă la modul în care paginile HTML sunt reciproc legate prin linkuri care direcţionează la alte documente HTML. De aceea, putem trage concluzia că linkurile sunt mecanismul de bază pentru legarea mai multor documente HTML.</p>
+      <h3>Linkurile în HTML</h3>
+      <p>În limbajul HTML, linkurile se definesc prin utilizarea tagului &lt;a&gt;, ca în exemplul următor:</p>
+      <p>&lt;a href="http://www.google.com/"&gt;Click to visit Google&lt;/a&gt;</p>
+      <p>Structura linkului creat se poate prezenta cu imaginea de mai jos</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/link.png" alt="">
+      <h3>URL</h3>
+      <p>URL (engl. Uniform Resource Locator) este adresa unei resurse pe web. Exemplul unui URL poate arăta astfel: <br> http://www.mysite.com:80/bookstore/book.html?id=1</p>
+      <img src="../Bazele_HTML-ului_şi_CSS-ului/images/url.png" alt="">
+      <ul>
+        <li><b>scheme</b> – denumirea protocolului folosit pentru comunicare.</li>
+        <li><b>fully qualified domain name (FQDN)</b>– defineşte locaţia precisă a calculatorului (hostului) în cadrul reţelei.</li>
+        <li><b>port number</b>– marcaj care defineşte un anumit proces sau serviciu care se execută pe calculatorul conectat la reţea.</li>
+        <li><b>path</b> – calea până la o anumită resursă pe calculatorul server; imaginea aceasta conţine o singură parte, în timp ce în practică poate avea şi un număr mai mare de părţi separate reciproc prin caracterul slash (linia oblică).</li>
+        <li><b>resource</b> – denumirea resursei care se cere de la server; un fişier concret.</li>
+        <li><b>query string</b> – parametri opţionali care se pot transmite serverului în formă de perechi de chei şi valori.</li>
+      </ul>
+      <p>Adresele URL pot apărea în două forme, ca adrese:</p>
+      <ul>
+        <li>relative si</li>
+        <li>absolute</li>
+      </ul>
+      <p>Adresa absolută este adresa completă până la resursă.</p>
+      <p>Adresa relativă este cea care se bazează pe o altă adresă. Astfel, o adresă relativă ar putea fi şi: <br> bookstore/book.html</p>
+      <p>Pentru a ajunge dintr-un folder la folderul radacina se va utiliza ../ pentru fiecare folder parinte spre exemplu</p>
+      <pre>
+        <p>-folder1</p>
+             <p>-folder2</p>
+                  <p>-folder3</p>
+                       <p>-folder4</p>
+      </pre>
+      <p>pentru a ajunge sa facem link catre un fisier index.html din folderul 3 intr-un fisier aflat in folderul 4 link-ul va fi urmatorul:  ../../folder3/index.html iar pentru a ajunge in fisierul root link-ul va fi ../../../</p>
+      <h3>Ce adrese trebuie folosite - cele absolute sau cele relative?</h3>
+      <p>Din întreaga poveste despre adresele relative şi cele absolute în cadrul linkurilor, putem concluziona câteva lucruri. În timpul creării site-urilor sau aplicaţiilor, întotdeauna se recomandă utilizarea adreselor relative în cadrul linkurilor. O astfel de abordare simplifică semnificativ procesul de publicare şi facilitează dezvoltarea. Având în vedere că dezvoltarea şi producţia se efectuează, în general, pe diferite calculatoare, utilizarea adreselor absolute complică semnificativ publicarea aplicaţiei pe serverul de producţie. Să vedem acest lucru pe un exemplu. În timpul dezvoltării, aplicaţia se află pe următorul domeniu (fully qualified domain name):</p>
+      <h3>Atributul target al elementului &lt;a&gt;</h3>
+      <p>Elementul &lt;a&gt; poate avea un atribut opţional numit atribut target, care defineşte modul în care se va activa linkul. Atributul target poate avea una dintre valorile de mai jos:</p>
+      <ul>
+        <li><b>_blank</b> Deschide documentul legat prin link într-o nouă fereastră sau într-un nou tab.</li>
+        <li><b>_self</b>Încarcă documentul legat prin link în aceeaşi fereastră în care se găseşte şi linkul; în cazul în care omitem atributul target, această valoare va fi considerată ca una implicită.</li>
+        <li><b>_parent</b>Încarcă documentul legat prin link în elementul părinte al paginii în care se găseşte linkul; dacă linkul nu se află pe pagina imbricată, el se va încărca într-o fereastră separată.</li>
+        <li><b>_top</b>	Se încarcă într-o fereastră separată, ignorând toate frame-urile.</li>
+      </ul>
+      <h3>Linkurile de tip e-mail</h3>
+      <p>Linkul se poate crea şi în aşa fel încât să indice adresa de e-mail. Astfel de linkuri, în loc să deschidă pagina, pornesc un program de e-mail implicit. De exemplu, dacă se foloseşte Microsoft Outlook, linkul va fi pornit de clientul de e-mail menţionat, se va deschide dialogul pentru un nou e-mail şi în câmpul address va introduce adresa stabilită în link.</p>
+      <p>&lt;a href="mailto:office@example.com"&gt;email link&lt;/a&gt;</p>
+      <p>Folosind linkul care indică adresa de e-mail, se poate defini şi titlul (subject) şi conţinutul (body) e-mail-ului. Acest lucru se obţine în felul următor:</p>
+      <p>&lt;a href="mailto:office@example.com?subject=Title&body=Message"&gt;email link&lt;/a&gt;</p>
+      <h3>Ancorele denumite (named anchors)</h3>
+      <p>Linkurile se pot folosi şi pentru a direcţiona utilizatorul către o parte din documentul HTML curent. În aceste scopuri se introduc ancorele denumite (engl. named anchor), care facilitează găsirea unui anumit detaliu în cadrul paginilor HTML lungi.</p>
+      <p>Prima etapă în activarea legării prin linkuri în cadrul documentului curent este crearea ancorei. Ancora poate fi orice element HTML, care va avea un atribut id, ca în exemplul de mai jos:</p>
+      <p>&lt;h2 id="subheading-1"&gt;Subheading 1&lt;/h2&gt;</p>
+      <p>În exemplu este creat un titlu prin folosirea tagului &lt;h2&gt; pe care este definită valoarea atributului ID. Pentru ca linkul să indice ancora astfel creată, este suficient să scriem următoarele:</p>
+      <p>&lt;a href="subheading-1"&gt;Go to Subheading 1&lt;/a&gt;</p>
+      <h3>Adresa URL de bază</h3>
+      <p>Elementul base defineşte adresa de bază pentru toate adresele relative în cadrul documentului HTML. Este permisă definirea unei singure adrese de bază la nivelul unei pagini, aşadar, aceasta trebuie definită în cadrul elementului head. Aspectul secţiunii head cu adresa de bază poate fi următorul:</p>
+      <pre>
+      &lt;html&gt;
+        &lt;head&gt;
+          &lt;base href="http://www.google.com"&gt;
+          &lt;title&gt;&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;a href="/"&gt;Google Start Page&lt;/a&gt;
+          &lt;a href="/doodles"&gt;Google Doodles&lt;/a&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+      </pre>
+      <p>În exemplul anterior, în antetul documentului HTML, este introdus elementul base cu atributul href. Valoarea atributului href reprezintă, de fapt, adresa de bază pentru toate adresele relative în cadrul acestui document HTML. Mai devreme aţi putut vedea că se presupune ca folderul, în cadrul căruia se găseşte documentul HTML, să fie locaţia de bază pentru toate adresele relative. Elementul base ne asigură să schimbăm acest lucru şi să definim individual adresa de bază a documentului HTML.</p>
+      <p>În corpul documentului HTML prezentat se găsesc două linkuri, ambele cu adrese URL relative:</p>
+      <ul>
+        <li><i>Google Start Page</i>– acest link ca valoare a atributului href are doar linia slash (/); când se ia în considerare adresa de bază definită mai devreme, acest link va activa deschiderea primei pagini a site-ului Google (http://www.google.com/).</li>
+        <li><i>Google Doodles</i>– acest link pentru valoarea atributului href are /doodles; când se adaugă această adresă relativă adresei de bază, putem trage concluzia că un astfel de link va indica la adresa: http://www.google.com/doodles.</li>
+        <br>
+      </ul>
+      
+    </section>
+    
+</body>
+</html>

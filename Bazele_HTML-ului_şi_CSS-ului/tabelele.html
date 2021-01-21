@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tabelele</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      width: 960px;
+      margin: 20px auto;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: rgb(6, 180, 0);
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(6, 180, 0);
+      text-shadow: 1px 1px black;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgb(0, 123, 180);
+      text-shadow: 1px 1px black;
+    }
+
+    aside {
+      width: 270px;
+      float: left;
+      box-sizing: border-box;
+      padding-right: 5px;
+    }
+
+    section {
+      width: 680px;
+      box-sizing: border-box;
+      border-left: 1px solid gray;
+      float: left;
+      padding-left: 10px;
+    }
+
+    #menu {
+      list-style-type: none;
+    }
+
+    textarea {
+      border-style: none;
+    }
+
+    img {
+      width: 675px;
+    }
+  </style>
+</head>
+<h1>Tabelele</h1>
+
+<body>
+  <aside>
+    <a href="../index.html">Home</a>
+  </aside>
+  <section>
+    <h3>Tabelele HTML</h3>
+    <p>Fiecare tabel constă din celule aranjate în rânduri. Tagul de bază pentru crearea unui tabel HTML este tagul
+      &lt;table&Gt;, în timp ce tagurile pentru crearea celulelor şi rândurilor sunt <b>td</b>, respectiv <b>td</b>.
+      Astfel, pentru crearea celulei se foloseşte tagul <b>td</b> - table data, iar pentru crearea rândului din tabel
+      folosim tagul <b>tr</b> - table row. Structura descrisă a tabelului HTML este prezentată în imaginea de mai jos:
+    </p>
+    <img src="../Bazele_HTML-ului_şi_CSS-ului/images/table.png" alt="">
+    <p>Fiecare celulă se formează prin folosirea elementului &lt;td&gt;. Mai multe elemente &lt;td&gt; se grupează
+      reciproc într-un rând, folosind elementul &lt;tr&gt;. La sfârşitul mai multor rânduri se creează un tabel în aşa
+      fel încât rândurile se grupează în cadrul elementului &lt;table&gt;. În exemplul de mai jos puteţi vedea cum arată
+      toate acestea transformate într-un cod HTML:</p>
+    <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;2&lt;/td&gt;
+    &lt;td&gt;3&lt;/td&gt;
+    &lt;td&gt;4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;5&lt;/td&gt;
+    &lt;td&gt;6&lt;/td&gt;
+    &lt;td&gt;7&lt;/td&gt;
+    &lt;td&gt;8&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;9&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+    &lt;td&gt;11&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </pre>
+    <p>Efectul produs este prezentat</p>
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+    </table>
+    <p>Schimbarea aspectului tabelelor HTML se obţine prin utilizarea CSS-ului, iar singurele două atribute ale tagului
+      &lt;table&gt; pe care le permite HTML5 sunt border şi sortable. Atributul border defineşte dacă tabelul va avea
+      cadru, în timp ce atributul sortable ne comunică dacă tabelul va avea posibilitatea de sortare. Având în vedere
+      acest lucru, dacă trebuie să obţinem un tabel cu anumite cadre, este suficient să scriem următoarele:</p>
+    <pre>
+        &lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;4&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;8&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;12&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+      </pre>
+    <p>Efectul codului prezentat va fi de această dată va fi:</p>
+    <table border="1">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+      </tr>
+    </table>
+    <h3>Celulele de titlu</h3>
+    <p>Tabelele HTML pot avea şi celule de titlu. Acestea sunt celule care definesc rânduri şi coloane. Se creează prin
+      utilizarea tagului cu marcajul th - table heading. Următorul exemplu ilustrează utilizarea lor:</p>
+    <pre>
+      &lt;table border="1"&gt;
+        &lt;tr&gt;
+          &lt;th&gt;*&lt;/th&gt;
+          &lt;th&gt;monday&lt;/th&gt;
+          &lt;th&gt;tuesday&lt;/th&gt;
+          &lt;th&gt;wednesday&lt;/th&gt;
+          &lt;th&gt;thursday&lt;/th&gt;
+          &lt;th&gt;friday&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;morning&lt;/th&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;evening&lt;/th&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      </pre>
+    <p>Codul prezentat produce un efect identic celui de mai jos:</p>
+    <table border="1">
+      <tr>
+        <th>*</th>
+        <th>monday</th>
+        <th>tuesday</th>
+        <th>wednesday</th>
+        <th>thursday</th>
+        <th>friday</th>
+      </tr>
+      <tr>
+        <th>morning</th>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <th>evening</th>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+    <h3>Unirea celulelor</h3>
+    <p>Diverse programe pentru procesarea textului şi tabelelor (Word, Excel, Spreadsheet...) asigură unirea mai multor
+      celule pe verticală sau orizontală. O astfel de funcţionalitate este asigurată şi de limbajul HTML, folosind două
+      atribute: colspan şi rowspan.</p>
+    <p>Când trebuie unite mai multe celule pe orizontală, se foloseşte atributul colspan. Următorul exemplu ilustrează
+      utilizarea atributului <b>colspan</b>.</p>
+    <pre>
+        &lt;table border="1"&gt;
+        &lt;tr&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td colspan="2"&gt;4&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+      </pre>
+    <p>Acest cod are urmatorul efect:</p>
+    <table border="1">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td colspan="2">4</td>
+        <td>6</td>
+      </tr>
+    </table>
+    <p>Când trebuie să unim celulele pe verticală, folosim atributul <b>rowspan</b>. Următorul exemplu ilustrează utilizarea acestui atribut.</p>
+    <pre>
+    &lt;table border="1"&gt;
+      &lt;tr&gt;
+        &lt;td rowspan="2"&gt;1&lt;/td&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    </pre>
+    <p>Acest cod avand urmatorul efect:</p>
+    <table border="1">
+      <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </table>
+    <h3>Regiunile tabelelor</h3>
+    <p>Tabelele HTML pot avea şi regiuni, prin a căror utilizare putem despărţi suplimentar conţinutul. Asftel, se poate defini antetul, corpul şi subsolul tabelului, folosind tagurile &lt;thead&gt;, &lt;tbody&gt; şi &lt;tfoot&gt;. Următorul exemplu ilustrează utilizarea tabelului HTML cu regiunile definite şi menţionate:</p>
+    <pre>
+    &lt;table&gt;
+       &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;td&gt;header cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;header cell&lt;/td&gt;
+      &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tfoot&gt;
+      &lt;tr&gt;
+        &lt;td&gt;footer cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;footer cell&lt;/td&gt;
+      &lt;/tr&gt;
+       &lt;/tfoot&gt;
+       &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;body cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;body cell&lt;/td&gt;
+      &lt;/tr&gt;
+       &lt;/tbody&gt;
+    &lt;/table&gt;
+      </pre>
+    <p>Acest cod va aparea asa:</p>
+    <table>
+      <thead>
+     <tr>
+       <td>header cell</td>
+     </tr>
+     <tr>
+       <td>header cell</td>
+     </tr>
+      </thead>
+      <tfoot>
+     <tr>
+       <td>footer cell</td>
+     </tr>
+     <tr>
+       <td>footer cell</td>
+     </tr>
+      </tfoot>
+      <tbody>
+     <tr>
+       <td>body cell</td>
+     </tr>
+     <tr>
+       <td>body cell</td>
+     </tr>
+      </tbody>
+   </table>
+   <p>Prin codul prezentat sunt definite trei regiuni în cadrul tabelului HTML: header, footer şi body. Browserele tratează, în general, conţinutul tuturor părţilor într-un mod egal, aşadar, definirea diferitor regiuni ale tabelului poate avea efect abia în combinaţie cu stilizarea CSS, când este permisă stilizarea diferitor regiuni ale tabelului în diferite moduri. De asemenea, în timpul tipăririi fiecărui document HTML, majoritatea browserelor repetă secţiunea head şi footer pe fiecare pagină, pentru o claritate mai bună.</p>
+   <p>Este interesant de observat că diferite regiuni ale tabelului HTML sunt specificate după următoarea ordine: &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;. Aceasta este ordinea corectă pentru definirea acestor regiuni, deşi pe pagină ele nu se afişează în această ordine. Astfel, întotdeauna trebuie să apară &lt;thead&gt; în a faţa lui &lt;tfoot&gt; şi în faţa părţii &lt;tbody&gt;, iar &lt;tfoot&gt; trebuie să apară în faţa lui &lt;tbody&gt;, dar după partea &lt;thead&gt;.</p>
+   <br>
+  </section>
+
+</body>
+
+</html>

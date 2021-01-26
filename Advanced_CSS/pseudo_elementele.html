@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-elementele</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+    </style>
+</head>
+<h1>Pseudo-elementele</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+       <h3>Ce sunt pseudo-elementele</h3>
+       <p>Aşa cum era cazul cu pseudo-clasele, şi pseudo-elementele sunt continuări speciale, respectiv cuvinte-cheie care se adaugă la sfârşitul selectorilor standard. Prima diferenţă dintre pseudo-clase şi pseudo-elemente constă în modul de formare a acestora. Pentru crearea pseudo-elementelor se foloseşte de două ori caracterul două puncte (::), ca în imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/pseudo-elemente.png" alt="">
+       <p>Pseudo-elementele au câteva moduri de aplicare diferită. Acestea se pot folosi la:</p>
+       <ul>
+           <li>stilizarea unei părţi din textul unui element HTML (prima literă şi prima linie din text);</li>
+           <li>stilizarea anumitor elemente care, iniţial, nu sunt parte a structurii HTML; aşadar, prin utilizarea pseudo-elementelor este permisă adăugarea conţinutului la începutul şi sfârşitul unui element HTML;</li>
+           <li>stilizarea textului selectat.</li>
+       </ul>
+       <h3>Ce pseudo-elemente există în CSS?</h3>
+       <p>În limbajul CSS există următoarele pseudo-elemente:</p>
+       <ul>
+           <li>::after</li>
+           <li>::before</li>
+           <li>::first-letter</li>
+           <li>::first-line</li>
+           <li>::selection</li>
+       </ul>
+       <h3>::after</h3>
+       <p>In CSS, pseudo-elementul ::after selectează ultimul descendent virtual asupra elementelor selectate. Cu alte cuvinte, pseudo-elementul ::after adaugă un anumit conţinut la sfârşitul elementului selectat. Sintaxa acestui pseudo-element este următoarea:</p>
+       <pre>
+        ::after { style properties }
+       </pre>
+       <p>Următorul exemplu va ilustra utilizarea pseudo-elementului ::after. Codul HTML este următorul:</p>
+       <pre>
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. <br> In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;
+       </pre>
+       <p>Pentru ca un conţinut să se adauge la sfârşitul paragrafului prezentat, putem scrie următoarele:</p>
+       <pre>
+            p::after {
+            content: " - Remember this";
+            color: red;
+            }
+       </pre>
+       <p>astfel textul va arta ca in imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img13.png" alt="">
+       <h3>::before</h3>
+       <p>Pseudo-elementul ::before adaugă un anumit conţinut la începutul elementului selectat. Cu alte cuvinte, pseudo-elementul ::before are un efect identic pseudo-elementului ::after, doar că există o diferenţă care constă în poziţia pe care se adaugă conţinutul.</p>
+       <p>Următorul exemplu va ilustra utilizarea pseudo-elementului ::before. Codul HTML este următorul:</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>Pentru adăugarea conţinutului înainte de paragraf, este suficient să scriem in styilizarea CSS:</p>
+       <pre>
+        p::before {
+            content: "Remember this - ";
+            color: red;
+            }
+       </pre>
+       <p>Textul va arata ca in imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img14.png" alt="">
+
+       <h3>::first-letter (:first-letter)</h3>
+       <p>Pseudo-elementul ::first-letter se poate folosi pentru stilizarea primei litere a elementelor selectate. Sintaxa acestui selector este următoarea:</p>
+       <pre>
+        ::first-letter { style properties }
+       </pre>
+       <p>Următorul exemplu va ilustra utilizarea selectorului ::first-letter. Codul HTML este următorul:</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>Pentru a evidenția prima literă a fiecărui paragraf prin mărirea dimensiunii fontului și schimbarea culorii, putem scrie următoarele:</p>
+       <pre>
+        p::first-letter { 
+            color: red;
+            font-size: 130%;
+            }
+       </pre>
+       <p>Efectul pe care îl produce această regulă CSS este ilustrat în imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img15.png" alt="">
+
+       <h3>::first-line</h3>
+       <p>Pentru stilizarea primei linii de text a unui element, se poate folosi selectorul CSS cu numele ::first-line. Este vorba de un pseudo-element care asigură doar selectarea primei linii de text a unui element. Textul format din mai multe linii este caracteristic doar pentru elementele block, respectiv pentru elemente ale căror valoare a proprietăţii display este: block, inline-block, table-cell sau table-caption. Pe elementele inline, pseudo-elementul ::first-line nu are efect.</p>
+       <pre>
+        ::first-line { style properties }
+       </pre>
+       <p>Pseudo-elementul ::first-line selectează textul, aşadar, acesta se poate folosi doar în combinaţie cu proprietăţile referitoare la stilizarea textului. Următorul exemplu ilustrează utilizarea selectorului ::first-line. Codul HTML este următorul:</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>Codul HTML conţine un element de tip paragraph. Cât text se va afla într-o linie pe pagină, depinde de mulţi factori. Totuşi, în felul următor va fi stilizată prima linie de text a paragrafului afişat, indiferent de cantitatea de text care se poate găsi în cadrul ei:</p>
+       <pre>
+        p::first-line { 
+            text-transform: uppercase;
+            font-weight: bold;
+            }
+       </pre>
+       <p>Aceasta stilizare va arta ca in imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img16.png" alt="">
+
+       <h3>::selection</h3>
+       <p>Pseudo-elementele asigură stilizarea unei părţi din textul selectat. Acest lucru se poate obţine datorită pseudo-elementului <i>::selection</i>. Pentru stilizarea textului selectat, se pot folosi următoarele proprietăţi:</p>
+       <ul>
+           <li>color</li>
+           <li>backround-color</li>
+           <li>cursor</li>
+           <li>outline</li>
+           <li>text-decoration</li>
+           <li>text-emphasis-color</li>
+           <li>text-shadow</li>
+       </ul>
+       <p>Sintaxa pseudo-elementului ::selection este următoarea:</p>
+       <pre>
+        ::selection { style properties }
+       </pre>
+       <p>Următorul exemplu ilustrează utilizarea pseudo-elementului ::selection. Codul HTML este următorul:</p>
+       <p>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu sem vel diam finibus lobortis. In rhoncus neque odio, non maximus ex pretium quis. Vivamus interdum convallis ex ac efficitur.&lt;/p&gt;</p>
+       <p>Stilizarea textului selectat se obţine în felul următor:</p>
+       <pre>
+        ::selection {
+            color: white;
+            background: coral;
+            }
+       </pre>
+       <p>Efectul obtinut este cel din imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img17.png" alt="">
+       <p>Diferite browsere folosesc diferite prefixe pentru marcarea proprietăţilor CSS non-standard:</p>
+       <ul>
+           <li><b>-webkit-</b>Chrome, Safari, versiunile recente ale browserelor Opera, iOS, Android</li>
+           <li><b>-moz-</b>Firefox</li>
+           <li><b>-o-</b>versiunile anterioare ale browserului Opera</li>
+           <li><b>-ms-</b>Internet Explorer şi MS Edge</li>
+       </ul>
+       <br>
+    </section>
+
+</body>
+
+</html>

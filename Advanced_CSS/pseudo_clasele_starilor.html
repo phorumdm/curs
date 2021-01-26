@@ -108,6 +108,7 @@
             color: yellow;
         }
      </pre>
+     <p>Configurarea acestor pseudoclase se vor efectua exact in ordinea de mai sus pentru a avea efect.</p>
         <p><b>:link</b></p>
         <p>Pseudo-clasa :link stilizează toate linkurile care nu sunt vizitate. Este logic să se pună întrebarea în ceea
             ce priveşte justificarea folosirii acestei pseudo-clase pentru selectarea linkurilor, având în vedere că o
@@ -154,7 +155,7 @@
         <p>seudo-clasa care se identifică deseori cu pseudo-clasa :active, este clasa :focus. Totuşi, aceste două
             pseudo-clase au o funcţie cu totul diferită. Pseudo-clasa :focus selectează elementul care pe pagină deţine
             un focus, ceea ce, practic, înseamnă că un astfel de element este pregătit să accepte inserarea de pe
-            dispozitivul de intrare al calculatorului (cel mai des de pe tastatură). Următorul exemplu ilustrează regula
+            dispozitivul de intrare al calculatorului (cel mai des de pe tastatură).Tot timpul pseudoclasa focus se va plasa inainte de pseudo-clasa active pentru a avea efect. Pseudo-clasa focus este acceptata doar de elementele cu atributul <b><i>href</i></b> insa se poate aplica si altor elemente utilizand atributul global <b><i>tabindex</i></b> Următorul exemplu ilustrează regula
             CSS cu selectorul :focus:</p>
         <pre>
         a:focus {

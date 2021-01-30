@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transformări CSS bidimensionale (2D)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Transformări CSS bidimensionale (2D)</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <h3>Ce sunt transformările?</h3>
+        <p>După cum ne sugerează şi denumirea, transformările asigură transformarea elementelor HTML prin influenţarea caracteristicilor lor vizuale. În acest fel, elementele trec dintr-o stare în alta, iar procesul de trecere dintr-o stare în alta se numeşte transformare.</p>
+        <p>În transformările CSS bidimensionale (2D) intră:</p>
+        <ul>
+            <li>translaţia (translate);</li>
+            <li>rotirea (rotate);</li>
+            <li>scalarea/schimbarea dimensiunii (scale);</li>
+            <li>înclinarea (skew).</li>
+        </ul>
+        <h3>Sistemul de coordonate 2D al CSS-ul</h3>
+        <p>Definirea poziţiei unui obiect în spaţiu se obţine cu ajutorul coordonatelor din sistemul de coordonate. Există două astfel de coordonate, dacă determinăm poziţia unui obiect în spaţiu cu două axe.Când vorbim de sistemele de coordonate folosite pe web, o regulă standard impune ca axa orizontală să se numească x, iar cea verticală y </p>
+        <img src="../Advanced_CSS/images/img18.png" alt="">
+        <p>Începutul sistemului de coordonate este definit de punctul cu coordonate (0,0), iar un astfel de punct se numeşte punct de origine (origin point). Punctul de origine este, de fapt, poziţia de referinţă din cadrul sistemului de coordonate, în raport cu care se exprimă poziţia celorlalte puncte din sistem.</p>
+        <p>În imaginea de mai sus trebuie observat şi faptul că toate punctele aflate deasupra punctului de referinţă au valori negative ale coordonatelor y. De asemenea, toate punctele aflate în stânga punctului de referinţă au valori negative ale coordonatelor x.</p>
+        <h3>Cum se definesc transformările CSS?</h3>
+        <p>Transformarea elementelor HTML cu CSS se obţine prin utilizarea proprietăţii transform. Până la standardizarea acestei proprietăţi, se utilizau şi formele cu prefixe specifice pentru diferite browsere:</p>
+        <ul>
+            <li><i>-webkit-transform</i></li>
+            <li><i>-moz-transform</i></li>
+            <li><i>-ms-transform</i></li>
+            <li><i>-o-transform</i></li>
+        </ul>
+        <p>Proprietatea CSS cu numele transform poate să accepte diferite valori care se exprimă prin funcţiile CSS. De fapt, fiecare transformare deţine propriul set de funcţii cu parametri pentru scopuri diferite, prin care se definesc caracteristicile transformării.
+        </p>
+    </section>
+
+</body>
+
+</html>

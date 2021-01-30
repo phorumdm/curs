@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rotirea</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Rotirea</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Rotirea elementelor HTML se poate obţine cu funcţia CSS cu numele rotate():</p>
+        <pre>
+            rotate(degrees)
+        </pre>
+        <p>Parametrul degrees se referă la unghiul de rotire şi se exprimă prin folosirea unităţii deg (grade).</p>
+        <p>Exemplul care ilustrează rotirea unui element div este următorul:</p>
+        <pre>
+            #transformed {
+            transform: rotate(20deg);
+            }
+        </pre>
+        <p>Efectul pe care îl are transformarea definită se poate vedea în imaginea de mai jos</p>
+        <img src="../Advanced_CSS/images/img19.png" alt="">
+        <p>În imaginea de mai sus este prezentat elementul div pe care este aplicată transformarea rotirii. În dreapta imaginii de mai sus este prezentat elementul div în raport cu poziţia sa iniţială.</p>
+        <p>Rotirea elementelor HTML cu funcţia rotate() se efectuează implicit în direcţia acelor de ceasornic. Dacă trebuie să obţinem rotirea în direcţia inversă, este suficient să definim valoarea negativă a unghiului:</p>
+        <pre>
+            #transformed {
+            transform: rotate(-20deg);
+            }
+        </pre>
+        <p>Efectul codului prezentat este ca în imaginea de mai jos</p>
+        <img src="../Advanced_CSS/images/img20.png" alt="">
+        <p>Ceea ce se poate observa în imaginile de mai sus este că transformarea rotirii are loc în raport cu centrul elementului care se transformă. Caracteristicile unui astfel punct de referinţă, în raport cu care se efectuează transformările, se pot influenţa folosind proprietatea transform-origin.</p>
+        <H4>Proprietatea transform-origin</H4>
+        <P>Proprietatea transform-origin se poate folosi pentru a seta punctul de referinţă al efectuării transformărilor. Valoarea implicită a acestei proprietăţi este:</P>
+        <pre>
+            transform-origin: 50% 50% 0;
+        </pre>
+        <p>Valoarea implicită defineşte punctul de referinţă al transformării, în centrul elementului, folosind valoarea de 50% pentru mutarea în raport cu coordonatele punctului de referinţă (care se află în colţul din stânga sus). Ultima valoare defineşte mutarea pe axa z, în caz că vor avea loc transformări tridimensionale,</p>
+        <p>Tocmai aţi văzut că proprietatea transform-origin poate accepta în total trei valori:</p>
+        <pre>
+            transform-origin: x-offset y-offset z-offset;
+        </pre>
+        <p>Pe lângă definirea tuturor celor trei valori, transform-origin poate fi specificată şi într-o formă cu două sau o singură valoare:</p>
+        <pre>
+            transform-origin: x-offset y-offset;
+            transform-origin: x-offset
+        </pre>
+        <p>Sintaxa impune următoarele reguli:</p>
+        <ul>
+            <li>când se specifică trei valori, acestea se referă la translaţia pe axa x, y şi z;</li>
+            <li>când se specifică două valori, acestea se referă la translaţia pe axa x şi y, în timp ce pentru valoarea translaţiei pe axa z se ia 0;</li>
+            <li>când se specifică o valoare, aceasta se referă la translaţia pe axa x, în timp ce pentru translaţia pe axa y se va lua valoarea de 50%, iar pentru translaţia pe axa z se ia valoarea 0.</li>
+        </ul>
+        <p>Pentru ca punctul de referinţă al efectuării transformărilor să se potrivească cu punctul iniţial al sistemului de coordonate al elementului, putem scrie următoarele:</p>
+        <pre>
+            transform-origin: 0px 0px;
+        </pre>
+        <p>În acest caz, rotirea se va efectua ca în imaginea de mai jos</p>
+        <img src="../Advanced_CSS/images/img21.png" alt="">
+        <br>
+    </section>
+
+</body>
+
+</html>

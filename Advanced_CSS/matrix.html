@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Matrix</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Transformările 2D se pot obţine şi cu funcţia matrix() care unifică toate transformările CSS. Ceea ce este în special interesant, este că până în prezent, browserul compilează transformările 2D din fundal în funcţia matrix(). Confirmarea acestui lucru se poate găsi şi în browser, în panoul Computed. De exemplu, pe un element se definește următoarea transformare:</p>
+        <pre>
+            transform: translate(50px, 50px);
+        </pre>
+        <p>Analizând panoul Computed se poate vedea clar că browserul compilează transformarea prezentată în forma care presupune utilizarea funcţiei matrix()</p>
+        <img src="../Advanced_CSS/images/img24.png" alt="">
+        <p>Din imaginea de mai sus vedem că transformarea translaţiei în fundal a fost transformată de browser în funcţia matrix() cu anumite valori ale parametrilor în imagine marcat cu cadrul albastru).</p>
+        <p>Funcţia matrix() acceptă şase parametri:</p>
+        <pre>
+            matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY());
+        </pre>
+        <p>Interesant este că funcţia matrix() acceptă valori pentru efectuarea scalării, înclinării şi translației, dar nu şi pentru rotire. Prin urmare, funcţia matrix() efectuează rotirea prin combinarea scalării şi a înclinării:</p>
+        <pre>
+            transform: rotate(20deg);
+        </pre>
+        <p>Linia browserului tocmai prezentată se transformă în:</p>
+        <pre>
+            transform: matrix(0.939693, 0.34202, -0.34202, 0.939693, 0, 0);
+        </pre>
+        <br>
+    </section>
+
+</body>
+
+</html>

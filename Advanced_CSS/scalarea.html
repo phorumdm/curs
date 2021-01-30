@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scalarea</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Scalarea</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Ca să mărim şi să micşorăm elementele HTML, putem să folosim funcţia scale() a proprietăţii transform. Sintaxa ei este următoarea:</p>
+        <pre>
+            scale(width_ratio, height_ration)
+        </pre>
+        <p>Funcţia scale() acceptă doi parametri care se folosesc pentru calcularea noilor dimensiuni ale elementelor. Primul parametru se referă la lăţime, iar al doilea la înălţime. Valoarea 1 ne arată că nu va avea loc nicio schimbare a dimensiunii. În mod similar, valoarea 2 ne arată că dimensiunea se va mări de două ori, iar valoarea 0.5 ne arată că dimensiunea să va micşora de două ori.</p>
+        <pre>
+            #transformed {
+            transform: scale(0.5, 2);
+            }
+        </pre>
+        <p>În exemplul prezentat, am definit că lăţimea elementului trebuie micşorată de două ori, iar înălţimea trebuie mărită de două ori. Astfel, exemplul va produce un efect identic celui din imaginea de mai jos</p>
+        <img src="../Advanced_CSS/images/img22.png" alt="">
+        <br>
+    </section>
+
+</body>
+
+</html>

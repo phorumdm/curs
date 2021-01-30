@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Translatia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Translatia</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Pentru ca un element să fie mutat în raport cu poziţia sa normală, putem să folosim transformarea translate. Astfel, este suficient să folosim funcţia translate() ca să transformăm mișcarea elementului. Sintaxa acestei funcţii este următoarea:</p>
+        <pre>
+            translate(x-axis)
+            translate(x-axis, y-axis)
+        </pre>
+        <p>Funcţia translate() poate accepta unul sau doi parametri. Când acceptă un parametru, acesta se referă la valoarea translaţiei pe axa x. A doua valoare defineşte translaţia pe axa y. Având în vedere că este vorba de o transformare 2D, se aplică sistemul de coordonate menţionat mai sus, cu două axe, la care punctul de referinţă (punctul de origine/origin) se potriveşte cu punctul din stânga sus al elementului care se transformă </p>
+        <img src="../Advanced_CSS/images/img25.png" alt="">
+        <p>Următorul exemplu ilustrează modul în care se poate folosi transformarea CSS cu numele translate:</p>
+        <pre>
+            #transformed {      
+            transform: translate(50px, 50px);
+                }
+        </pre>
+        <img src="../Advanced_CSS/images/img26.png" alt="">
+        <p>Pe lângă funcţia translate(), ca să transformăm translaţia putem să folosim şi câteva funcţii specifice, cum ar fi:</p>
+        <ul>
+            <li><i>translateX(x-axis)</i>– pentru translaţia orizontală (pe axa x); un efect identic îl are şi funcţia <i>translate(x-axis, 0);</i></li>
+            <li><i>translateY(y-axis)</i> – pentru translaţia verticală (pe axa y); un efect identic îl are şi funcţia <i>translate(0, y-axis)</i></li>
+        </ul>
+        <br>
+    </section>
+
+</body>
+
+</html>

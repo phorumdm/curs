@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio şi video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+ body {
+        width: 960px;
+        margin: 20px auto;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(6, 180, 0);
+      }
+   h1{
+    text-align: center;
+    color: rgb(6, 180, 0);
+    text-shadow: 1px 1px black;
+    }
+   h2{
+    text-align: center;
+    color: rgb(0, 123, 180);
+    text-shadow: 1px 1px black;
+    }
+    aside{
+        width: 270px;
+        float: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+    }
+  section{
+        width: 680px;
+        box-sizing: border-box;
+        border-left: 1px solid gray;
+        float: left;
+        padding-left: 10px;
+    }
+    #menu{
+      list-style-type: none;
+    }
+    textarea{
+        border-style: none;
+      }
+    img{
+      width: 675px;
+    }
+    div{
+      background-color: rgb(184, 162, 162);
+    }
+
+      </style>
+</head><h1>Audio şi video</h1>
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+     <p>În etapele iniţiale ale web-ului, site-urile se foloseau, în primul rând, pentru prezentarea datelor de tip text. Vitezele de internet erau foarte mici, aşadar integrarea înregistrărilor audio şi video în documentele HTML era, practic, irealizabilă. Pe lângă aceasta, primele versiuni ale limbajului HTML nu aveau standarde care să asigure încorporarea înregistrărilor video sau audio într-o pagină HTML.</p>
+     <p>Cu timpul, viteza internetului a crescut, aşadar la începutul anilor 2000 au fost satisfăcute primele precondiţii tehnice pentru integrarea conţinuturilor multimedia în documentele HTML. Având în vedere că HTML încă nu a avut o soluţie originală pentru execuţia acestei operaţii, s-au dezvoltat numeroase tehnologii externe care au încercat să compenseze o astfel de lipsă. În primul rând, ne referim la Flash, dar şi la alte tehnologii similare, cum ar fi Silverlight, Java Applets, JavaFX etc. Totuşi, aceste tehnologii au avut şi numeroase dezavantaje. Au colaborat prost cu tehnologiile web existente, conţinutul lor era foarte greu de indexat şi reprezentau o sursă ideală pentru numeroase probleme de securitate, care erau foarte serioase. Prin urmare, a apărut nevoia de un mod standardizat de includere a înregistrărilor audio şi video în documentele HTML. Soluţia a apărut împreună cu versiunea HTML5 a limbajului, când sunt prezentate, pentru prima dată, elemente HTML special destinate integrării înregistrărilor audio şi video.</p>
+     <p>În specificaţia limbajului HTML5, pentru prima dată sunt integrate elemente cu ajutorul cărora este posibilă adăugarea înregistrărilor audio şi video în documentele HTML. Este vorba de următoarele elemente HTML:</p>
+     <ul>
+       <li>&lt;audio&gt; – pentru integrarea înregistărilor audio,</li>
+       <li>&lt;video&gt; – pentru integrarea înregistrărilor video.</li>
+     </ul>
+     <p>Mai sus, am menţionat de mai multe ori noţiunea de integrare a înregistării audio sau video. Trebuie să ştiţi că nu este vorba de o integrare reală, deoarece fişierele audio şi video nu pot deveni parte componentă a documentului HTML. Am avut o situaţie identică şi în lecţia anterioară, când am vorbit de imagini. Pur şi simplu, imaginile, înregistrările audio şi video nu se integrează literalmente în documentele HTML propriu-zise. Fişierele prin care sunt prezentate acestea există ca unităţi independente, în timp ce în documentele HTML, prin folosirea elementelor img, audio sau video, definim doar în ce mod vor fi afişate în cadrul documentelor HTML</p>
+     <p>Pe lângă noile elemente HTML pentru integrarea înregistrărilor audio şi video, versiunea limbajului HTML5 a adus şi o noutate în domeniul gestionării programabile a unui astfel de conţinut. Este vorba de un set complet nou de funcţionalităţi JavaScript care se pot folosi pentru controlul conţinutului audio şi video.
+    </p>
+    <p>În continuarea acestei lecţii, desigur, nu ne vom ocupa cu utilizarea limbajului JavaScript şi a conceptelor avansate pentru controlul înregistrărilor audio şi video, ci vom ilustra utilizarea de bază a tagurilor HTML audio şi video.</p>
+    <h3>Audio şi HTML</h3>
+    <p>Limbajul HTML5 a mutat semnificativ barierele când vine vorba de lucrul cu sunetul. Înainte de HTML5, nu exista un standard pentru reproducerea fişierelor audio în cadrul documentului HTML, iar singurul mod de a obţine aşa ceva era utilizarea plugin-urilor, cum ar fi Flash.</p>
+    <p>HTML5 susţine reproducerea pentru trei formate audio, şi anume:</p>
+    <ul>
+      <li><b>Mp3</b> (MPEG-2 Audio Layer III) – cel mai popular format pentru prezentarea fişierelor audio pe internet; aplică comprimare cu pierderi de calitate, însă cu un raport foarte bun între dimensiunea fişierului şi calitatea acestuia; este protejat prin brevet; susţinut de toate browserele;</li>
+      <li><b>Wav</b> (Waveform Audio File Format) – format dezvoltat de companiile IBM şi Microsoft; susţinut de sistemele de operare Windows, Macintosh şi Linux;</li>
+      <li>bOgg – format dezvoltat din partea fundaţiei Xiph.Org Foundation; este un format gratuit şi deschis.</li>
+    </ul>
+    <p>Pentru adăugarea sunetului în documentul HTML, se foloseşte elementul audio. Următorul exemplu ilustrează utilizarea acestui element:</p>
+    <pre>
+      &lt;audio controls&gt;
+      &lt;source src="jingle.ogg" type="audio/ogg"&gt;
+      &lt;source src="jingle.mp3" type="audio/mpeg"&gt;
+      Your browser does not support the audio element.
+      &lt;/audio&gt;
+    </pre>
+    <p>HTML-ul prezentat pe pagină produce un efect identic celui din imaginea 9.1.</p>
+    <img src="../Bazele_HTML-ului_şi_CSS-ului/images/img6.png" alt="">
+    <p>În imaginea 9.1. se poate observa că browserul a randat elementul audio ca un player cu controale de reproducere. Controalele se află aici, deoarece pe elementul audio este setat atributul controls. În caz contrar, controalele nu ar fi fost vizibile.</p>
+    <div>
+      <h4>Atributele boolean</h4>
+      <p>Atributul controls tocmai prezentat este unul dintre aşa-numitele atribute boolean. Noţiunea de boolean se foloseşte deseori în programare pentru marcarea datelor, care pot avea două valori: adevărat şi fals sau activat şi dezactivat (engl. on, off). Atributele boolean HTML se pot observa ca un fel de comutator. În exemplul prezentat, un astfel de comutator este atributul controls, care activează controalele pe player pentru ascultarea înregistrării audio.</p>
+      <p>Starea adevărată (activată) a atributului boolean în limbajul HTML se poate prezenta în trei moduri diferite. Forma completă de specificare a stării activate, în exemplul atributului boolean controls deja văzut, arată chiar aşa:</p>
+      <pre>
+        controls="controls"
+      </pre>
+      <p>Forma completă de specificare a atributului boolean presupune definirea denumirii acestuia ca valoare.</p>
+      <p>A doua formă de specificare a atributului boolean permite utilizarea unei valori text goale:</p>
+      <pre>
+        controls=""
+      </pre>
+      <p>În cele din urmă, valoarea adevărată se poate prezenta ca în exemplu - prin specificarea denumirii atributului fără valoare. O astfel de formă se numeşte formă prescurtată:</p>
+      <pre>
+        controls
+      </pre>
+      <p>Toate cele trei exemple produc un efect identic, care ca rezultat are definirea atributului boolean cu valoarea adevărată (on).</p>
+      <p>Valoarea falsă (off) a atributului boolean se defineşte prin lipsa lui. Luând în considerare exemplul prezentat, dacă pe elementul audio nu se specifică atributul controls, se va considera că el este în starea dezactivată (off), aşadar nici controalele nu vor fi afişate.</p>
+      <p>Atributul controls nu este singurul atribut boolean pe care îl cunoaşte limbajul HTML. Pe lângă el, alte atribute importante ale acestui tip sunt şi checked, disabled, required, selected, autoplay...</p>
+    </div>
+    <p>Identic cu modul de lucru cu imaginile, nici fişierele audio nu se integrează direct în documentul HTML, ci în cadrul documentului se introduce doar un link către ele. Aceasta se obţine prin folosirea elementului source. În exemplu sunt definite două elemente de acest tip, iar browserul va reproduce primul fişier al cărui format îl susţine.</p>     
+    <p>Dacă se întâmplă ca browserul să nu aibă posibilitatea de reproducere a sunetului în cadrul documentului HTML, utilizatorului îi va fi afişat textul definit în cadrul tagurilor <audio> şi </audio>. În exemplu, acesta este textul Your browser does not support the audio element.</p>
+    <p>În timpul introducerii linkului către fişierul audio, se specifică şi tipul său, utilizând atributul type. Ca valoare a acestui atribut, se introduce tipul MIME, iar formatele audio pe care le susţine elementul, precum şi tipurile MIME aparţinătoare, sunt prezentate în tabelul 9.1.</p>
+    <img src="../Bazele_HTML-ului_şi_CSS-ului/images/img7.png" alt="">
+    <p>Atributele autoplay, controls, loop şi muted sunt atribute de tip boolean. Din tabelul 9.2. se poate vedea că elementul audio poate conţine şi atributul src, prin care se evită obligaţia de definire a elementelor source individuale. În acest fel, exemplul prezentat se poate modifica:</p>
+    <pre>
+      &lt;audio controls src="link-song.ogg"&gt;
+      Your browser does not support the audio element.
+      &lt;/audio&gt;
+    </pre>
+    <h3>Video şi HTML</h3>
+    <p>Aşa cum era cazul cu reproducerea fişierelor audio, înainte de apariţia limbajului HTML5, nu exista un standard nici pentru reproducerea fişierelor video în cadrul documentelor HTML. Limbajul HTML5 introduce un element video care asigură acest lucru.</p>
+    <p>În cadrul documentului HTML se pot reproduce fişiere video în trei formate diferite:</p>
+    <ul>
+      <li><b>MP4 </b>(MPEG-4 Part 14) – format de tip container, dezvoltat de Moving Pictures Expert Group; bazat pe QuickTime. Este susţinut de toate browserele şi este recomandat de platforma YouTube;</li>
+      <li><b>WebM</b> – format dezvoltat de companiile Mozilla, Opera, Adobe şi Google; în momentul de faţă este sponsorizat de compania Google;</li>
+      <li><b>Ogg</b> – format dezvoltat de Xiph.Org Foundation; este un format gratuit şi deschis.</li>
+    </ul>
+    <p>După cum am spus deja, reproducerea fişierelor video în cadrul documentului HTML se poate efectua prin utilizarea elementelor video. Următorul exemplu ilustrează utilizarea acestui element:</p>
+    <pre>
+      &lt;video width="960" controls&gt;
+      &lt;source src="video.mp4" type="video/mp4"&gt;
+      &lt;source src="video.webm" type="video/webm"&gt;
+      Your browser does not support HTML5 video.
+      &lt;/video&gt;
+    </pre>
+    <p>Utilizarea elementului video este foarte similară utilizării elementului pentru reproducerea fişierelor audio. Prin atributul controls, se activează afişarea controalelor de reproducere. Fişierul video se leagă prin link de document prin folosirea elementului sursă. În timpul definirii locaţiei la care se găseşte fişierul video, se defineşte denumirea tipului MIME. Aceste denumiri sunt prezentate în tabelul 9.3.</p>
+    <img src="../Bazele_HTML-ului_şi_CSS-ului/images/img8.png" alt="">
+    <p>Tag-ul video poate conţine toate aceste atribute pe care le cunoaşte şi tag-ul audio. Atributul caracteristic elementului video este atributul poster, prin care se poate defini URL-ul la care se găseşte imaginea care va fi afişată în timpul încărcării materialului video sau înainte de pornirea acestuia.</p>
+    <br>
+    </section>
+    
+</body>
+</html>

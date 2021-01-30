@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crearea săgeţii</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Crearea săgeţii pentru derularea în jos (scroll down)</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+       <p>Exemplul care va ilustra utilizarea abordărilor prezentate în această lecţie se va referi la crearea săgeţii pentru derularea în jos. Este vorba de funcţionalitatea pe care o deţin aproape toate site-urile moderne, în special dacă este vorba de site-urile cu one page design. Săgeata pentru derularea în jos (scroll down), se află, de obicei, în josul secţiunii iniţiale a paginii web, ea având două scopuri principale şi anume:</p> 
+       <ul>
+           <li>informează utilizatorul că pagina mai are conţinut care va fi vizibil prin derulare;</li>
+           <li>asigură utilizatorului un mod uşor de trecere la următoarea secţiune a conţinutului.</li>
+       </ul>
+       <p>Deşi o săgeată pentru derularea în jos se poate crea în foarte multe moduri, printre care în special utilizarea imaginilor png sau a vectorilor pentru reprezentarea săgeţii, în continuare o vom crea folosind exclusiv elementele HTML simple. Efectul care va fi obţinut în cele din urmă, este ilustrat în imaginea de mai jos</p>
+       <img src="../Advanced_CSS/images/img27.png" alt="">
+       <p>Ca să realizăm acest exemplu, pe lângă diferitele tehnici descrise în această lecţie, vom folosi şi pseudo-elementele descrise în modulul anterior al acestui curs.</p>
+       <p>Structura HTML cu care vom prezenta săgeata pentru derularea în jos este următoarea:</p>
+       <pre>
+        &lt;a id="scroll-down-arrow" href="#next-section"&gt;&lt;/a&gt;
+       </pre>
+       <p>După cum puteţi vedea, săgeata pentru derularea în jos este realizată cu ajutorul unui singur element a. Aplicând o stilizare specială, acest element obţine un aspect ca în imaginea 5.11. (cercul în cadrul căruia se află săgeata care indică în jos).</p>
+       <pre>
+        #scroll-down-arrow {
+            position: absolute;
+            bottom: 24px;
+            width: 46px;
+            height: 46px;
+         
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+         
+            border: 2px solid #fff;
+            border-radius: 100%;
+            }
+         
+        #scroll-down-arrow::before {
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+            left: 0;
+            right: 0;
+            top: 10px;
+            margin: 0 auto;
+            border-left: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: rotate(-45deg);
+        }        
+       </pre>
+       <p>Analizând stilizarea prezentată, concluzionăm următoarele:</p>
+       <ul>
+           <li>afişarea cercului obţinut s-a realizat prin setarea cadrului cu o rotunjire de 100% pe elementul a;</li>
+           <li>afişarea săgeţii care indică în jos s-a obţinut prin stilizarea specială a pseudo-elementului ::before;</li>
+       </ul>
+       <p>Acesta este un exemplu ideal care, pe lângă transformări, ilustrează adevărata putere a pseudo-elementelor. Acestea se folosesc adesea pentru efectuarea acestora şi a altor operaţii similare în timpul stilizării. Pe lângă aceasta, ne referim şi la crearea unui element vizual suplimentar, care nu se poate obţine în niciun alt mod prin stilizarea elementului propriu-zis. Pseudo-elementul din exemplu nu are niciun conţinut text, dar pentru a fi afişat pe pagină, trebuie să definim valoarea atributului content. Tocmai de aceea, acest atribut din exemplu deţine aşa-numita valoare goală, care se obţine punând apostrofurile între care nu se specifică nimic ('').</p>
+       <p>Săgeata care se poate vedea în cadrul cercului elementului scroll down este, de fapt, obţinută prin setarea cadrului din stânga şi dreapta pseudo-elementului. Apoi, un astfel de pseudo-element, cu două cadre vizibile, este rotit cu -45 de grade, pentru ca săgeata să se orienteze în jos.</p>
+       <br>
+    </section>
+
+</body>
+
+</html>

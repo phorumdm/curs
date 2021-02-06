@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Definirea transformarilor 3D</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+    </style>
+</head>
+<h1>Definirea transformarilor 3D</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+       <p>Utilizând CSS-ul se pot efectua trei tipuri de transformări diferite în sistemul de coordonate tridimensional, şi anume:</p>
+       <ul>
+           <li>translaţia (translate);</li>
+           <li>scalarea (scale);</li>
+           <li>rotirea (rotate).</li>
+       </ul>
+       <p>Transformările 3D funcţionează similar cu transformările 2D prezentate în lecţia anterioară. Aceasta înseamnă că şi pentru definirea lor folosim proprietatea transform. Totuşi, funcţiile CSS, care se setează pentru valoarea acestei proprietăţi, sunt diferite. De exemplu, în lecţia anterioară am folosit funcţia CSS cu numele rotate() care a rotit elementul în sistemul de coordonate 2D. Obţinerea rotirii în sistemul de coordonate 3D se poate efectua în felul următor:</p>
+       <pre>
+        #transformed {
+        transform: rotateX(30deg) rotateY(30deg) rotateZ(30deg);
+        }
+       </pre>
+       <p>Exemplul ilustrează folosirea funcţiilor rotateX(), rotateY() şi rotateZ() precum şi valorile proprietăţii transform.</p>
+       <p>Exemplul prezentat produce un efect identic cu cel din imaginea 6.2.</p>
+       <img src="../Advanced_CSS/images/img29.png" alt="">
+       <p>Un efect identic se poate obţine şi în felul următor, prin unificarea definirii rotirii pe toate axele, prin folosirea unei funcţii CSS speciale, destinate transformărilor 3D:</p>
+       <pre>
+        transform: rotate3d(1,1,1, 30deg);
+       </pre>
+       <p>De această dată am folosit funcţia rotate3d(). Primii trei parametri se referă la axele în jurul cărora se va efectua rotirea. Numărul 1 ne arată că va avea loc rotirea, iar 0 că nu va exista nicio rotire. În general, primii trei parametri se referă la axele x,y şi z. Ultimul parametru defineşte unghiul de rotaţie. </p>
+       <p>Din exemplele prezentate vedem că funcţiile CSS pentru obţinerea transformărilor 3D sunt diferite. Acestea se pot împărţi în două grupuri - în funcţii care efectuează transformările pe axe individuale (tabelul 6.1.) şi în funcţii care asigură definirea unificată a transformărilor pe mai multe axe (tabelul 6.2.).</p>
+       <img src="../Advanced_CSS/images/img30.png" alt="">
+       <br>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crearea unui carusel</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+        div{
+            background-color: rgb(192, 176, 176);
+        }
+    </style>
+</head>
+<h1>Crearea unui carusel</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Toate aceste tehnici, prezentate în această lecţie, vor fi folosite acum ca să creăm un exemplu real. Exemplul va ilustra obţinerea unui efect interesant de carusel (carousel). Efectul final va fi ca în imaginea 6.9.</p>
+        <img src="../Advanced_CSS/images/img37.png" alt="">
+        <p>Ca să obţinem acest efect vom folosi o simplă structură HTML:</p>
+        <pre>
+            &lt;div id="main-container"&gt;
+            &lt;div id="tile-container"&gt;
+            &lt;div class="tile" id="tile-1"&gt;&lt;/div&gt;
+            &lt;div class="tile" id="tile-2"&gt;&lt;/div&gt;
+            &lt;div class="tile" id="tile-3"&gt;&lt;/div&gt;
+            &lt;div class="tile" id="tile-4"&gt;&lt;/div&gt;
+            &lt;div class="tile" id="tile-5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+        </pre>
+        <p>În containerul principal (main-container) se mai găseşte încă un container (tile-container) care conţine cinci elemente div. Fiecare dintre aceste cinci elemente div reprezintă câte un dreptunghi care se văd în imaginea 6.9. Cele cinci elemente div deţin o clasă comună cu numele tile, iar fiecare este marcat şi cu atributul id cu o valoare specifică.</p>
+        <p>Ca să stilizăm elementele HTML prezentate, în aşa fel încât să obţinem un rezultat ca în imaginea 6.9., vom folosi următoarele reguli CSS:</p>
+        <pre>
+            #main-container {
+                perspective: 400px;
+                position: relative;
+                width: 300px;
+                height: 220px;
+                margin: 80px auto;
+                }
+                 
+                #tile-container {
+                transform: translateZ(-300px) rotate3d(0, 1, 0, 0deg);
+                transform-style: preserve-3d;
+                }
+                 
+                .tile {
+                width: 300px;
+                height: 220px;
+                border-radius: 8px;
+                position: absolute;
+                margin: 0 auto;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 64px;
+                opacity: 0.95;
+                }
+                 
+                 
+                #tile-1 {
+                background-image: url("img/like.png");
+                background-color: #914E67;
+                transform: rotateY(0deg) translateZ(300px);
+                }
+                 
+                #tile-2 {
+                background-image: url("img/idea.png");
+                background-color: #4FBA6F;
+                transform: rotateY(72deg) translateZ(300px);
+                }
+                 
+                #tile-3 {
+                background-image: url("img/clock.png");
+                background-color: #5192D2;
+                transform: rotateY(144deg) translateZ(300px);
+                }
+                 
+                #tile-4 {
+                background-image: url("img/star.png");
+                background-color: #E8BF1C;
+                transform: rotateY(216deg) translateZ(300px);
+                }
+                 
+                #tile-5 {
+                background-image: url("img/note.png");
+                background-color: #5D7586;
+                transform: rotateY(288deg) translateZ(300px);
+                }
+        </pre>
+        <p>Principalele lucruri pe care trebuie să le luăm în considerare în cadrul CSS-ului prezentat sunt:</p>
+        <ul>
+            <li>în containerul principal (main-container) este definită perspectiva de 400px; dimensiunea acestui element este limitată prin setarea proprietăţilor width şi height, pentru ca în timpul transformărilor 3D lăţimea şi înălţimea paginii HTML să nu se mărească; de asemenea, prin setarea marginii la 80px auto, se adaugă spaţiu extern în partea de sus şi de jos şi se centrează întreaga afişare;</li>
+            <li>fiecare dintre cele cinci plăci (tile) existente în cadrul caruselului au caracteristici comune definite prin clasa tile; cu această clasă se defineşte înălţimea şi lăţimea plăcilor, rotunjirea marginilor, o uşoară transparenţă, precum şi anumite caracteristici ale imaginilor de fundal; în cadrul clasei tile se efectuează poziţionarea absolută a fiecărei plăci;</li>
+            <li>fiecare placă are imagine de fundal; imaginile se află în cadrul folderului img;</li>
+            <li>cu selectorii #tile-1, #tile-2, #tile-3, #tile-4 şi #tile-5 sunt selectate plăcile individuale şi astfel, sunt definite caracteristicile lor specifice: imaginea de fundal şi culoarea de fundal, precum şi două transformări - rotirea pe axa y şi translaţia pe axa z;</li>
+            <li>valorile rotirii pe axa y pentru plăcile indiviuale nu sunt alese aleatoriu; pur şi simplu, când plăcile se aranjează în mod egal în cadrul caruselului, valoarea unui cerc plin este împărţită la numărul de plăci: 360/5=72; în acest fel, se obţine valoarea care reprezintă diferenţa dintre unghiurile plăcilor adiacente, aşadar, concluzionăm uşor că valorile finale ale unghiurilor sunt: 0, 72, 144, 216 şi 288;</li>
+            <li>fiecare placă este mutată pe axa z, pentru ca în spaţiul tridimensional să se creeze o distanţă între ele; logic, prin definirea valorilor mai mici, plăcile caruselului vor fi mai aproape una de alta şi invers;</li>
+            <li>pentru ca întregul carusel să se poată roti ca un întreg, pe containerul interior (tile-container) este definită transformarea rotirii pe axa y; această transformare este precedată de mutarea/translaţia pe axa z, prin care influenţăm dimensiunea întregii afişări care va fi mai aproape de observator sau mai departe de el;</li>
+            <li>având în vedere că transformările 3D sunt definite şi pe elementul părinte şi pe elementele descendente, pe elementul tile-container este definită proprietatea CSS transform-style cu valoarea preserve-3d; în acest fel este păstrat spaţiul 3D al elementelor descendente, respectiv, în acest exemplu - plăcile caruselului.</li>
+            <br>
+        </ul>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Punctul de infinit</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,200;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            width: 960px;
+            margin: 20px auto;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: rgb(6, 180, 0);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(6, 180, 0);
+            text-shadow: 1px 1px black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 123, 180);
+            text-shadow: 1px 1px black;
+        }
+
+        aside {
+            width: 270px;
+            float: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+        }
+
+        section {
+            width: 680px;
+            box-sizing: border-box;
+            border-left: 1px solid gray;
+            float: left;
+            padding-left: 10px;
+        }
+
+        #menu {
+            list-style-type: none;
+        }
+
+        textarea {
+            border-style: none;
+        }
+
+        img {
+            width: 675px;
+        }
+        #formula{
+            color: red;
+        }
+        div{
+            background-color: rgb(192, 176, 176);
+        }
+    </style>
+</head>
+<h1>Punctul de infinit</h1>
+
+<body>
+    <aside>
+        <a href="../index.html">Home</a>
+    </aside>
+    <section>
+        <p>Punctul de referinţă al perspectivei se mai numeşte şi punct de infinit (vanishing point). Acesta este punctul în care, în îndepărtare se intersectează două planuri paralele ale reprezentării 3D (imaginea 6.5.).</p>
+        <img src="../Advanced_CSS/images/img33.png" alt="">
+        <p>În ceea ce privește transformările CSS tridimensionale, punctul de infinit se află, implicit, în centrul elementului, el având definită o perspectivă (imaginea 6.6.).</p>
+        <img src="../Advanced_CSS/images/img34.png" alt="">
+        <p>Analizând imaginile 6.5. şi 6.6. concluzionăm că poziţia punctului de infinit este condiţionată direct de poziţia din care se observă o reprezentare în spaţiul tridimensional.</p>
+        <p>Poziţia punctului de infinit, iar pe lângă aceasta şi poziţia din care se observă elementul transformat, se poate influenţa folosind proprietatea perspective-origin:</p>
+        <pre>
+            perspective-origin: x-position;
+            perspective-origin: x-position y-position;
+        </pre>
+        <p>Liniile de cod ilustrează diferite forme în care putem să utilizăm perspective-origin. Este important să menţionăm că proprietatea perspective-origin se foloseşte în combinaţie cu proprietatea perspective, ceea ce înseamnă că ambele proprietăţi menţionate se definesc pe elementul părinte şi se aplică pe elementele descendente:</p>
+        <pre>
+            perspective: 300px;
+            perspective-origin: 0% 50%;
+        </pre>
+        <p>Mai devreme am spus că punctul de origine se află în centrul elementului cu perspectiva, ceea ce practic înseamnă că este valoarea implicită a acestei proprietăţi:</p>
+        <pre>
+            perspective-origin: 50% 50%;
+        </pre>
+        <br>
+    </section>
+
+</body>
+
+</html>
